@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1">
+    			<meta name="keywords" content="cozumel tours, cozumel excursions" />
+		<meta name="description" content="Cozumel Tours and Excursions" />
+	    <meta property="og:url" content="https://thisiscozumel.com/tours/packageimages/resized/mobile/cozumel-el-cielo-tour-15.jpg" />
+
+		<meta property="og:type"   content="article" />
+		<meta property="og:title" content="Cozumel Tours and Excursions - This is Cozumel" />
+		<meta property="og:description" content="Cozumel Tours and Excursions - This is Cozumel" />
+		<meta property="og:image" content="https://thisiscozumel.com/tours/img/homepage-bg.jpg" />
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Cozumel Tours and Excursions - This is Cozumel">
+		<meta name="twitter:description" content="Cozumel Tours and Excursions - This is Cozumel">
+		<meta name="twitter:image" content="https://thisiscozumel.com/tours/img/homepage-bg.jpg">
+		<meta name="twitter:url" content="https://thisiscozumel.com/tours/packageimages/resized/mobile/cozumel-el-cielo-tour-15.jpg">
+	    <title> Cozumel Tours and Excursions - This is Cozumel </title>
+    
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PT9BZRL');</script>
+	<!-- End Google Tag Manager -->
+
+	<script type="text/javascript">
+
+	
+	
+	</script>
+
+		<!-- Favicon -->
+		<link rel='shortcut icon' href="https://thisiscozumel.com/tours/img/favicon.ico" type='image/x-icon'>
+
+    <!-- Bootstrap -->
+    <link href="https://thisiscozumel.com/tours/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://thisiscozumel.com/tours/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- External CSS libraries -->
+
+    <link rel="stylesheet" type="text/css" href="https://thisiscozumel.com/tours/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://thisiscozumel.com/tours/css/slider.css">
+
+	<!--[if IE 9]>
+		<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/ie.css">
+	<![endif]-->
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://thisiscozumel.com/tours/css/customstyle.css">
+	<link rel="stylesheet" type="text/css" href="https://thisiscozumel.com/tours/css/default.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oleo+Script:400,700" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://thisiscozumel.com/tours/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+       <link href="https://thisiscozumel.com/tours/css/slider.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://thisiscozumel.com/tours/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- Custom Theme Style -->
+    <script src="https://thisiscozumel.com/tours/vendors/jquery/dist/jquery.min.js"></script>
+        <script>
+    $(document).ready(function(){
+        var height = $(window).height();
+        $(".main-div").css({"min-height": "calc("+height+"px - (60px + 62px))","min-height": "-webkit-calc("+height+"px - (60px + 62px))"});
+    });
+	</script>
+  </head>
+
+  <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT9BZRL"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+	        <!-- top navigation -->
+    	        <!-- main header start-->
+<div class="main-header">
+    <div class="container" style="margin-left: 0px;margin-right: 0px;width:100%;">
+				<!-- <div class="col-lg-1 col-sm-1 hidden-xs"></div> -->
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+
+                <button type="button" class="mt-menu navbar-toggle collapsed " data-toggle="collapse"
+                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand-logo"  style="padding:0px;margin-top:5px;" href="http://thisiscozumel.com/">
+                    <img class="img-responsive" style="width: auto;margin-left: 0;" src="https://thisiscozumel.com/tours/img/main-cozumel-logo.png" alt="This is Cozumel">
+                </a>
+
+
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-top: 16px;">
+					
+                    <li class="dropdown">
+                        <a style="display: inline-table;" href="https://thisiscozumel.com/tours" onclick="location.href='https://thisiscozumel.com/tours'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tours and Excursions</a>
+                        <i class="fa fa-plus open-sub-icon open-sub-plus"></i>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://thisiscozumel.com/tours/category/adventure-tours" title="Adventures Tours and Off-Road Excursions">Adventure Tours</a>
+                            </li>
+                            <li>
+                                <a href="https://thisiscozumel.com/tours/category/beach-tours-passes" title="Cozumel All-Inclusive Beach Passes, Packages and Tours">Beach Tours/Passes</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/boat-tours" title="Boat tours and sailing trips">Boat Tours</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/educational-tours" title="Education Tours and Cultural Experiences">Educational Tours</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/family-tours" title="Family Tours and Kid-Friendly Activities">Family Tours</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/group-tours" title="Group Tours and Activties">Group Tours</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/other-services" title="Other Services, Transfers, Car Rentals and Gift Vouchers">Other Services</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/new-special-offers" title="Special Offers and New Cozumel Tours">New/Special Offers</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/party-tours" title="Party Tours and Bar Hops">Party Tours</a></li><li class="item-498"><a href="https://thisiscozumel.com/tours/category/romantic-tours" title="Romantic Tours and Activities">Romantic Tours</a>
+                            </li>
+                            <li>
+                                <a href="https://thisiscozumel.com/things-to-do/dive" title="Scuba Diving for Beginners and Certified Divers">Scuba Diving</a>
+                            </li>
+                            <li><a href="https://thisiscozumel.com/tours/category/shore-excursions" title="Shore Excursions and Tours for Cruise Passengers">Shore Excursions</a>
+                            </li>
+                            <li>
+                                <a href="https://thisiscozumel.com/tours/category/sightseeing-tours" title="Sightseeing Tours and Island Excursions">Sightseeing Tours</a>
+                            </li>
+                            <li>
+                                <a href="https://thisiscozumel.com/tours/category/snorkel-tours" title="Cozumel Tours and Packages that include Snorkeling">Snorkel Tours</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a style="display: inline-table;" href="https://thisiscozumel.com/tours/category/beach-tours-passes">All-Inclusive</a></li>
+                    <li><a style="display: inline-table;" href="https://thisiscozumel.com/tours/category/romantic-tours">Couples</a></li>
+                    <li><a style="display: inline-table;" href="https://thisiscozumel.com/tours/tag/transfer">Transfers</a></li>
+                    <li><a style="display: inline-table;" href="https://thisiscozumel.com/tours/packagedetails/car-rental-reservations">Car Rentals</a></li>
+                    <li><a style="display: inline-table;" href="https://thisiscozumel.com/tours/category/new-special-offers">Specials</a></li>
+                    <li class="dropdown">
+                        <a style="display: inline-table;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="true">Research</a>
+                        <i class="fa fa-plus open-sub-icon open-sub-plus"></i>
+                        <ul class="dropdown-menu">
+                            <li class="sub dropdown">
+                                <a href="/things-to-do">Things To Do</a>
+                                <i class="fa fa-plus open-sub-icon open-sub-plus"></i>
+                                <ul class="dropdown-menu" style="left:100%">
+                                        <li>
+                                            <a href="https://thisiscozumel.com/tours">Tours & Excursions</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://thisiscozumel.com/things-to-do/78-beaches">Beaches</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://thisiscozumel.com/things-to-do/89-attractions">Attractions</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://thisiscozumel.com/things-to-do/93-shopping" title="Where to go shopping in Cozumel">Shopping</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://thisiscozumel.com/things-to-do/77-other-activities" title="Other activities and things to do in Cozumel">Other Activities</a>
+                                        </li>
+                                </ul>
+                                <li class="sub dropdown">
+                                    <a href="https://thisiscozumel.com/news/70-latest-news" title="Latest Cozumel News and Offers">News</a>
+                                    <i class="fa fa-plus open-sub-icon open-sub-plus"></i>
+                                    <ul class="dropdown-menu" style="left:100%;">
+                                        <li><a href="https://thisiscozumel.com/news/">Archives</a></li>
+                                    </ul>
+                                    <i class="fa fa-plus open-sub-icon open-sub-plus"></i>
+                                </li>
+                                <li>
+                                    <a href="https://thisiscozumel.com/places-to-stay">Places To Stay</a>
+                                </li>
+                                <li><a href="https://thisiscozumel.com/restaurants">Restaurants</a></li>
+                                <li><a href="https://thisiscozumel.com/bars">Going Out</a></li>
+                                <li><a href="https://thisiscozumel.com/realestate">Real Estate</a></li>
+                                <li><a href="https://thisiscozumel.com/tourist-info" title="Useful Information for Visitors">Useful Info</a></li>
+                                </ul>
+                    </li>
+                   
+                   
+					<li><a style="display: inline-table;" href="http://thisiscozumel.com/contact">Contact Us</a></li>
+					                    <li><a href="https://thisiscozumel.com/tours/personalinfo" title="My Cart" style="font-size:15px;"><span class="fa fa-shopping-cart"></span><span id="mobcartitem">&nbsp;<!-- (3) --></span></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <!-- /.container -->
+        </nav>
+    </div>
+    <script>
+    function getcatelist1() {
+		var url = "https://thisiscozumel.com/tours/api/categorylisting";
+		$.get(url, function(data) {
+			var catelist = "<li><a href=https://thisiscozumel.com/tours>All Cozumel Tours</a></li>";
+
+			if(data) {
+				$.each(data['data'], function(i, cate) {
+					var slug = "https://thisiscozumel.com/tours/category/" + cate['slug'];
+
+					catelist = catelist + "<li><a href="+slug+">"+cate['name']+"</a></li>";
+			    })
+
+			}
+
+			$("#catedropdown").html(catelist);
+		}, 'json');
+	};
+
+	 $(document).ready(function() {
+		 getcatelist1();
+	    });
+
+   </script>
+
+</div>
+<!--main-header end-->
+            <!-- /top navigation -->
+
+		<div class="main-div">
+        <!-- page content -->
+        
+        <!-- page banner start-->
+            <div class="container-fluid page-banner" style="padding-top:0px;padding-bottom:0px;background-image:url(https://thisiscozumel.com/tours/img/homepage-bg.jpg)">
+
+                <h1 class="col-lg-12 col-md-12 hidden-xs hidden-sm banner-text">
+                    Search over 60 Cozumel tours and excursions
+                    <br>
+                    handpicked by Local Experts
+                </h1>
+                <h3 class="hidden-lg hidden-md hidden-xs col-sm-12 banner-text">
+                    Search over 60 Cozumel tours and excursions
+                    <br>
+                    handpicked by Local Experts
+                </h3>
+                <h4 class="hidden-lg hidden-md hidden-sm col-xs-12 banner-text">
+                    Search over 60 Cozumel tours and excursions
+                    <br>
+                    handpicked by Local Experts
+                </h4>
+
+                    <div class="col-lg-12  text-center" id="search-container">
+                         <div id="custom-search-input">
+                                <!-- <div class=""> -->
+                        <input type="search" name="q" class="form-control input-lg" placeholder="Search" id = "search" style="border-radius: 0px;width:500px;">
+                                <!-- </div> -->
+                        </div>
+                    </div>
+              <img alt="" style="width:100%;height:auto;visibility:hidden;margin-top:-176px" src="https://thisiscozumel.com/tours/img/homepage-bg.jpg">
+            </div>
+<!-- page banner end -->
+
+<!-- content-area start-->
+<div class="content-area">
+    <div class="container">
+        <div class="row">
+            <div id="packageData">
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+               <div class="option-bar">
+                   <div class="row" style="margin-left: 15px;margin-right:15px;">
+
+                           <div class="section-heading padding-0">
+                               <h2 style="font-size:18px;padding-top:10px;text-transform:initial;">Oops, we can't find what you were looking for!</h2>
+                                <h4>The page may have moved or does not exist. Please double-check the link you used or try the menus or search box to find what you were looking for instead.</h4>
+
+                       </div>
+                   </div>
+                </div>
+             </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+              <div class="Recent-news">
+
+    <h2 class="title">Browse By Tour Category </h2>
+                  <div class="row">
+										<div class="col-xs-12">
+											<div class="option-bar" style="border-radius: 0px;padding: 0px;border:none;margin-bottom: 0px;margin-top:-10px">
+												<div class="sorting-options">
+														<select class="sorting"   name="category" id="category" onchange="window.location = this.options[this.selectedIndex].value;" style="width:100%;color:black;font-size:14px;">
+																 <option value="#">Please Select</option>
+
+
+														 </select>
+												</div>
+											</div>
+										</div>
+                  </div>
+
+
+
+                </div>
+   <script type="text/javascript">
+
+  function getcatelist() {
+		var url = "https://thisiscozumel.com/tours/api/categorylisting";
+		$.get(url, function(data) {
+			var catelist = "<option value=#>Please Select</option> <option value=https://thisiscozumel.com/tours>All Cozumel Tours</option>";
+
+			if (data) {
+				$.each(data['data'], function(i, cate) {
+					var slug = "https://thisiscozumel.com/tours/category/" + cate['slug'];
+					catelist = catelist + "<option value="+slug+">"+cate['name']+"</option>";
+			    })
+			}
+
+			$("#category").html(catelist);
+		}, 'json');
+	};
+
+	 $(document).ready(function() {
+		 getcatelist();
+	    });
+</script>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- car-list end-->
+            <!-- /page content -->
+        </div>
+
+        <!-- footer content -->
+                <!-- footer start-->
+<footer class="main-footer">
+    <div class="container">
+<div class="row">
+            <div class="col-md-3 col-sm-12 footer-item ">
+                <div class="footer-item-content">
+                  <img class="img-responsive" style="width: auto;margin-left: -4px;" src="https://thisiscozumel.com/tours/img/main-cozumel-logo.png" alt="This is Cozumel">
+                    <p>
+                    </p><br/>
+                    <ul style="margin-top:-36px">
+                        <li>
+                          <a href="tel:1-866-677-0058">&nbsp;&nbsp;U.S. Toll-Free: 1-866-677-0058</a>
+                        </li>
+                        <li>
+                            <a href="tel:1-866-677-0058">&nbsp;&nbsp;Cozumel/WhatsApp:<br/>&nbsp;&nbsp;+52-1-987-111-5284</a>
+                        </li>
+                        <!-- <li>
+                            <a href="tel:+55-417-634-7071">&nbsp;&nbsp;+55 417-634-7071</a>
+                        </li>-->
+                        <li>
+                            <a href="mailto:info@thisiscozumel.com">&nbsp;&nbsp;info@thisiscozumel.com</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-social-list">
+                      <li>
+                          <a target="_blank" href="http://www.facebook.com/thisiscozumel" class="facebook">
+                              <i class="fa fa-facebook"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a target="_blank" href="http://www.twitter.com/thisiscozumel" class="twitter">
+                              <i class="fa fa-twitter"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a target="_blank" href="http://www.google.com/+Thisiscozumel" class="google">
+                              <i class="fa fa-google-plus"></i>
+                          </a>
+                      </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 footer-item">
+                <div class="footer-item-content">
+                    <h2>&nbsp;</h2>
+                    <div class="line-dec" style="background-color:#2A2A2A"></div>
+                    <ul>
+                        <li>
+                            <a href="http://thisiscozumel.com/about-us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/contact">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/advertise">Advertise</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/legal">Legal</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/services">Our Services</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/legal/1562-terms-and-conditions#privacy" >Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/legal/1562-terms-and-conditions">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 footer-item ">
+                <div class="footer-item-content">
+                    <h2><br/></h2>
+                    <div class="line-dec" style="background-color:#2A2A2A"></div>
+                    <ul>
+                        <li>
+                            <a href="http://thisiscozumel.com/legal/1562-terms-and-conditions#reservations">Reservation Policy</a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/legal/1561-copyright">Copyright &amp; Reproducing Information </a>
+                        </li>
+                        <li>
+                            <a href="http://thisiscozumel.com/legal/1562-terms-and-conditions#cookies">Cookie Notice</a>
+                        </li>
+                        <li>
+                          <div  class="details-button" style="margin-top:6px">
+                            <a href="https://thisiscozumel.com/tours" class="footer-btn">Book Cozumel Tours</a>
+                          </div>
+                        </li>
+                        <li>
+                          <div  class="details-button" style="margin-top:6px">
+                            <a href="http://thisiscozumel.com/contact/1563-email-updates" class="footer-btn">Sign up for Cozumel News</a>
+                          </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12 footer-item ">
+
+             </div>
+</div>
+    </div>
+</footer>
+<!-- footer end-->
+
+<!-- sub-footer start-->
+
+  <div class="sub-footer pad-extra">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+
+                  <div class="col-xs-12"><p style="font-size:13px !important;font-weight:700">&copy; Site content copyright&nbsp;<a href="http://communicationcommon.com/" target="_blank" ><img src="https://thisiscozumel.com/tours/img/creativecommon.png" alt='Communication Common' style="height:auto;width: 215px;padding-bottom:4px;padding-left: 2px;padding-right: 2px;"></a> 2005-2026. All rights reserved.</p></div>
+              </div>
+            </div>
+          </div>
+  </div>
+
+<!-- Google Analytics Code -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1593731-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+            <!-- /footer content -->
+
+
+	        <script src="https://thisiscozumel.com/tours/js/bootstrap.min.js"></script>
+<script src="https://thisiscozumel.com/tours/js/bootstrap-slider.js"></script>
+<script src="https://thisiscozumel.com/tours/js/typeahead.bundle.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://thisiscozumel.com/tours/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom javascript -->
+<script src="https://thisiscozumel.com/tours/js/app.js"></script>
+<script type="text/javascript">
+  function setDropDown(){
+    $('.dropdown').hover(
+	    function(){
+	    	$('.dropdown-toggle', this).parent().addClass( "open" );
+	      //$('.dropdown-toggle', this).trigger('click');
+	    },
+	    function(){
+	    	$('.dropdown-toggle', this).parent().removeClass( "open" );
+	    }
+    );
+  }
+  $(document).ready(function(){
+	  $(".open-sub-icon").click(function(){
+		  if($(this).hasClass("open-sub-plus")){
+			  $(this).parent().find(".dropdown-menu").first().addClass("click-plus");
+			  $(this).parent().find(".dropdown-menu").find("a").css({"padding": "5px 15px 5px 25px"});
+			  if($(this).parent().find(".dropdown").first().hasClass('sub')){
+				  $(this).parent().find(".dropdown").first().removeClass('sub')
+			  }
+
+			  $(this).removeClass("fa-plus");
+			  $(this).removeClass("open-sub-plus");
+			  $(this).addClass("fa-minus");
+		  }else{
+			  $(this).parent().find(".dropdown-menu").first().removeClass("click-plus");
+			  $(this).parent().find(".dropdown-menu").find("a").css({});
+			  $(this).removeClass("fa-minus");
+			  $(this).addClass("fa-plus");
+			  $(this).addClass("open-sub-plus");
+		  }
+	  });
+  });
+</script>
+
+<script>
+	$(".carousel").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  allowPageScroll:"vertical"
+
+});
+</script>
+    
+	
+    <script id="empty-template" type="text/x-handlebars-template">
+      <div class="EmptyMessage">No Tours found for your search.</div>
+    </script>
+    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+    <script type="text/javascript">
+
+     jQuery(document).ready(function($) {
+         oldPackageContent = "";
+         setDropDown();
+         (function (){
+             var search = window.location.search;
+             var index = search.indexOf("page=");
+             var elems = $(".pagination > li");
+             if(index==-1 && elems[0]){
+                 elems[0].className="active";
+                 return;
+             }
+             var currentPage = parseInt(search.substring(index+5,search.length));
+
+             for(var i=0;i<elems.length;i++){
+                    if(currentPage-1==i){
+                        elems[i].className="active";
+                        break;
+                    }
+             }
+         })();
+
+         var engine, remoteHost, template, empty;
+
+         $.support.cors = true;
+
+         empty = Handlebars.compile($("#empty-template").html());
+
+         var engine = new Bloodhound({
+             remote: {
+                 url: 'https://thisiscozumel.com/tours/find?q=%QUERY%',
+                 wildcard: '%QUERY%'
+             },
+             datumTokenizer: Bloodhound.tokenizers.whitespace('q'),
+             queryTokenizer: Bloodhound.tokenizers.whitespace,
+         });
+
+         $('#search').typeahead({
+                hint: $('.Typeahead-hint'),
+                menu: $('.Typeahead-menu'),
+                minLength: 3,
+                classNames: {
+                  open: 'is-open',
+                  empty: 'is-empty',
+                  cursor: 'is-active',
+                  suggestion: 'Typeahead-suggestion',
+                  selectable: 'Typeahead-selectable'
+                }
+              }, {
+                source: engine.ttAdapter(),
+                displayKey: 'screen_name',
+                templates: {
+                    empty: empty,
+                    header: [
+                        '<div class="list-group search-results-dropdown search-dropdown" style="width: 100%;">'
+                    ],
+                    suggestion: function (data) {
+                        return '<a href="https://thisiscozumel.com/tours/packagedetails/' + data['slug'] + '" class="list-group-item search-item">' +  data['name'] + '</a>'
+                    }
+                },
+                limit: 10,
+         });
+
+         $("#search").keyup(function(key){
+             var code = key.which;
+             if(code==13){
+                 $(".tt-menu").hide();
+                 searchCall(false);
+             }
+             if($("#search").val() == "" && isDisplayingSearchResult){
+                $("#packageData").html(oldPackageContent);
+                isDisplayingSearchResult = false;
+             }
+         });
+     });
+
+     function searchCall(sortflag){
+         var query = $("#search").val();
+         var sorting = $("#sorting").val();
+
+         if(query != ""){
+             if(!sortflag && oldPackageContent == ""){
+                 oldPackageContent = $("#packageData").html();
+             }
+             $("#packageData").html('<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="text-align:center;"><img src="https://thisiscozumel.com/tours/img/loading.gif"></div>');
+             if(sortflag){
+                 var data = {query : query, sorting: sorting};
+             }else{
+                 var data = {query : query};
+             }
+             var url = "https://thisiscozumel.com/tours/package/search";
+             $.get(url, data, function(res) {
+                if(res) {
+                    isDisplayingSearchResult = true;
+                    $("#packageData").html(res);
+                    $(".package-name").each(function () {
+                        var regex = new RegExp( '(' + query + ')', 'gi' );
+                        $(this).html($(this).html().replace(regex, '<font style="color:#fa8040;">'+query+'</font>'));
+                    });
+                }
+             });
+         }
+     }
+
+     function sortResult(){
+         searchCall(true);
+     }
+    </script>
+    <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=883&amp;locationId=2471675&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=false&amp;iswide=false&amp;border=false&amp;display_version=2"></script>
+      </body>
+</html>

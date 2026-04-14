@@ -7,345 +7,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #0D4F4F;
-            --secondary: #1A8F8F;
-            --accent: #F4A261;
-            --white: #FFFFFF;
-            --light: #F8F9FA;
-            --dark: #1A1A2E;
-        }
+        :root { --primary: #0D4F4F; --secondary: #1A8F8F; --accent: #F4A261; --white: #FFFFFF; --light: #F8F9FA; --dark: #1A1A2E; }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark);
-            background: var(--light);
-            overflow-x: hidden;
-        }
+        body { font-family: 'Montserrat', sans-serif; color: var(--dark); background: var(--light); }
         
-        /* Navigation */
-        nav {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 30px rgba(0,0,0,0.08);
-        }
+        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 30px rgba(0,0,0,0.08); }
         
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 50px;
-        }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
         
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--secondary); }
         
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
         
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            position: relative;
-        }
+        .hero { height: 100vh; background: linear-gradient(135deg, rgba(13,79,79,0.85), rgba(26,143,143,0.75)), url('images/tour-cielo/EL_CIELO_MANTA_1.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); }
         
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s;
-        }
+        .hero-content { max-width: 900px; padding: 20px; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 20px; }
+        .hero-content p { font-size: 1.4rem; opacity: 0.9; margin-bottom: 40px; }
         
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a:hover { color: var(--secondary); }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; }
         
-        .btn-cta {
-            background: var(--secondary);
-            color: var(--white) !important;
-            padding: 12px 30px;
-            border-radius: 30px;
-        }
+        .btn-hero { padding: 18px 40px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: var(--white); color: var(--primary); }
+        .btn-whatsapp { background: #25D366; color: var(--white); }
         
-        .btn-cta::after { display: none !important; }
+        .tours { padding: 100px 50px; max-width: 1400px; margin: 0 auto; }
         
-        /* Hero */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(13,79,79,0.85), rgba(26,143,143,0.75)),
-                        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-        }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--primary); }
         
-        .hero-content {
-            max-width: 900px;
-            padding: 20px;
-        }
+        .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
         
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
+        .tour-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .tour-card:hover { transform: translateY(-10px); }
         
-        .hero-content p {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
-        }
+        .tour-image { height: 250px; overflow: hidden; }
+        .tour-image img { width: 100%; height: 100%; object-fit: cover; }
         
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        
-        .btn-hero {
-            padding: 18px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary {
-            background: var(--white);
-            color: var(--primary);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .btn-whatsapp {
-            background: #25D366;
-            color: var(--white);
-        }
-        
-        .btn-whatsapp:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(37,211,102,0.3);
-        }
-        
-        /* Tours Section */
-        .tours {
-            padding: 100px 50px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-        
-        .tours-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .tour-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.4s;
-        }
-        
-        .tour-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        
-        .tour-image {
-            height: 250px;
-            overflow: hidden;
-        }
-        
-        .tour-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .tour-card:hover .tour-image img {
-            transform: scale(1.1);
-        }
-        
-        .tour-info {
-            padding: 30px;
-        }
-        
-        .tour-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--dark);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .tour-info h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        
-        .tour-meta {
-            display: flex;
-            gap: 20px;
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        
+        .tour-info { padding: 30px; }
+        .tour-badge { display: inline-block; background: var(--accent); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; }
+        .tour-info h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
+        .tour-meta { display: flex; gap: 20px; color: #666; font-size: 0.9rem; margin-bottom: 15px; }
         .tour-meta i { color: var(--secondary); margin-right: 5px; }
+        .tour-price { font-size: 1.8rem; color: var(--secondary); font-weight: 700; }
+        .tour-link { display: inline-block; margin-top: 15px; color: var(--secondary); text-decoration: none; font-weight: 600; }
         
-        .tour-price {
-            font-size: 1.8rem;
-            color: var(--secondary);
-            font-weight: 700;
-        }
-        
-        .tour-price span {
-            font-size: 0.9rem;
-            color: #666;
-            font-weight: 400;
-        }
-        
-        .tour-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .tour-link:hover { color: var(--primary); }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 80px 50px 40px;
-        }
-        
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-        }
-        
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .footer-logo span { color: var(--secondary); }
-        
-        .footer-section h4 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-        
-        .footer-section p, .footer-section a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover { color: var(--secondary); }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--secondary);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
-        }
+        footer { background: var(--dark); color: var(--white); padding: 60px 50px; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
         
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
-            .tours-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -355,9 +72,8 @@
             <a href="index.html" class="logo">Maya <span>Sun</span> Tours</a>
             <ul class="nav-links">
                 <li><a href="#tours">Tours</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="https://wa.me/5299845899872" class="btn-cta">Reservar</a></li>
+                <li><a href="https://wa.me/5299845899872">Reservar</a></li>
             </ul>
         </div>
     </nav>
@@ -365,12 +81,10 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Descubre el Caribe Mexicano</h1>
-            <p>Experiencias únicas con mantarrayas, snorkeling en arrecifes magicales y aventuras inplaceables</p>
+            <p>Experiencias únicas con mantarrayas, snorkeling y aventuras inplaceables</p>
             <div class="hero-buttons">
                 <a href="#tours" class="btn-hero btn-primary">Ver Tours</a>
-                <a href="https://wa.me/5299845899872" class="btn-hero btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
+                <a href="https://wa.me/5299845899872" class="btn-hero btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
     </section>
@@ -378,57 +92,57 @@
     <section class="tours" id="tours">
         <div class="section-title">
             <h2>Nuestros Tours</h2>
-            <p>Las mejores experiencias en Riviera Maya</p>
         </div>
         
         <div class="tours-grid">
+            <!-- Tour al Cielo -->
             <div class="tour-card">
-                <div class="tour-image">
-                    <img src="images/tour-cielo/01_manta_real_4.jpg" alt="Tour al Cielo">
-                </div>
+                <div class="tour-image"><img src="images/tour-cielo/EL_CIELO_MANTA_1.jpg" alt="Tour al Cielo"></div>
                 <div class="tour-info">
-                    <span class="tour-badge">🌟 Más Popular</span>
-                    <h3>Tour al Cielo</h3>
-                    <div class="tour-meta">
-                        <span><i class="fas fa-clock"></i> 4-5 horas</span>
-                        <span><i class="fas fa-users"></i> Grupos pequeños</span>
-                    </div>
-                    <p style="color: #666; margin-bottom: 15px;">Nada con mantarrayas gigantes en los arrecifes de Cozumel</p>
+                    <span class="tour-badge">🌟 #1 Más Popular</span>
+                    <h3>Tour al Cielo - Mantarrayas</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 4-5 horas</span><span><i class="fas fa-users"></i> Grupo pequeño</span></div>
+                    <p style="color:#666;margin-bottom:15px;">Nada con mantarrayas gigantes en Cozumel</p>
                     <div class="tour-price">$1,150 <span>MXN</span></div>
-                    <a href="tour-cielo.html" class="tour-link">Ver detalles →</a>
+                    <a href="#" class="tour-link">Ver detalles →</a>
                 </div>
             </div>
             
+            <!-- Chichen Itza -->
             <div class="tour-card">
-                <div class="tour-image">
-                    <img src="images/chichen-itza/01_kukulkan.jpg" alt="Chichen Itza">
-                </div>
+                <div class="tour-image"><img src="images/chichen-itza/kukulkan_1.jpg" alt="Chichen Itza"></div>
                 <div class="tour-info">
                     <span class="tour-badge">🏛️ Historia</span>
                     <h3>Chichen Itza</h3>
-                    <div class="tour-meta">
-                        <span><i class="fas fa-clock"></i> 12 horas</span>
-                        <span><i class="fas fa-users"></i> Guía experto</span>
-                    </div>
-                    <p style="color: #666; margin-bottom: 15px;">Visita la maravilla del mundo maya</p>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 12 horas</span><span><i class="fas fa-users"></i> Guía bilingüe</span></div>
+                    <p style="color:#666;margin-bottom:15px;">Visita la maravilla del mundo maya</p>
                     <div class="tour-price">$1,299 <span>MXN</span></div>
                     <a href="#" class="tour-link">Ver detalles →</a>
                 </div>
             </div>
             
+            <!-- Isla Mujeres -->
             <div class="tour-card">
-                <div class="tour-image">
-                    <img src="https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800" alt="Xcaret">
-                </div>
+                <div class="tour-image"><img src="images/isla-mujeres/isla_1.jpg" alt="Isla Mujeres"></div>
                 <div class="tour-info">
-                    <span class="tour-badge">🎭 Cultura</span>
-                    <h3>Xcaret</h3>
-                    <div class="tour-meta">
-                        <span><i class="fas fa-clock"></i> 10 horas</span>
-                        <span><i class="fas fa-users"></i> Full Day</span>
-                    </div>
-                    <p style="color: #666; margin-bottom: 15px;">El parque mexicano por excelencia</p>
-                    <div class="tour-price">$2,099 <span>MXN</span></div>
+                    <span class="tour-badge">🏝️ Playa</span>
+                    <h3>Isla Mujeres</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 6 horas</span><span><i class="fas fa-users"></i> Catamarán</span></div>
+                    <p style="color:#666;margin-bottom:15px;">Día de playa y snorkel en Isla Mujeres</p>
+                    <div class="tour-price">$1,499 <span>MXN</span></div>
+                    <a href="#" class="tour-link">Ver detalles →</a>
+                </div>
+            </div>
+            
+            <!-- Tulum -->
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/tulum/tulum_1.jpg" alt="Tulum"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🧉 Cultura</span>
+                    <h3>Tulum + Cenote</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 5 horas</span><span><i class="fas fa-users"></i> Guía incluido</span></div>
+                    <p style="color:#666;margin-bottom:15px;">Ruinas mayas + nado en cenote</p>
+                    <div class="tour-price">$899 <span>MXN</span></div>
                     <a href="#" class="tour-link">Ver detalles →</a>
                 </div>
             </div>
@@ -437,41 +151,18 @@
     
     <footer id="contacto">
         <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-logo">Maya <span>Sun</span> Tours</div>
-                <p>Tu puerta de entrada a las experiencias más Increíbles del Caribe mexicano.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                </div>
+            <div>
+                <div class="logo" style="margin-bottom:20px;">Maya <span>Sun</span> Tours</div>
+                <p>Tu aventura comienza aquí.</p>
             </div>
-            
-            <div class="footer-section">
-                <h4>Contacto</h4>
+            <div>
+                <h4 style="margin-bottom:15px;">Contacto</h4>
                 <p>📞 +52 984 589 9872</p>
                 <p>📧 hola@mayasuntours.com</p>
-                <p>📍 Riviera Maya, México</p>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Tours Populares</h4>
-                <a href="#">Tour al Cielo</a>
-                <a href="#">Chichen Itza</a>
-                <a href="#">Xcaret</a>
-                <a href="#">Xplor</a>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Enlaces</h4>
-                <a href="#">Términos y Condiciones</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Contacto</a>
             </div>
         </div>
-        
         <div class="copyright">
-            <p>© 2024 Maya Sun Tours. Todos los derechos reservados.</p>
+            <p>© 2024 Maya Sun Tours</p>
         </div>
     </footer>
 </body>
