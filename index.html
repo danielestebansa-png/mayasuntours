@@ -3,65 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maya Sun Tours - Tours Increíbles en Riviera Maya</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Maya Sun Tours - Tours en Riviera Maya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --primary: #0D4F4F; --secondary: #1A8F8F; --accent: #F4A261; --white: #FFFFFF; --light: #F8F9FA; --dark: #1A1A2E; }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body { font-family: 'Montserrat', sans-serif; color: var(--dark); background: var(--light); }
-        
-        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 30px rgba(0,0,0,0.08); }
-        
+        nav { background: var(--white); padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
-        
         .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--secondary); }
-        
-        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
-        
-        .hero { height: 100vh; background: linear-gradient(135deg, rgba(13,79,79,0.85), rgba(26,143,143,0.75)), url('images/tour-cielo/EL_CIELO_MANTA_1.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); }
-        
-        .hero-content { max-width: 900px; padding: 20px; }
-        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 20px; }
-        .hero-content p { font-size: 1.4rem; opacity: 0.9; margin-bottom: 40px; }
-        
-        .hero-buttons { display: flex; gap: 20px; justify-content: center; }
-        
-        .btn-hero { padding: 18px 40px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; text-decoration: none; }
+        .hero { height: 90vh; background: linear-gradient(135deg, rgba(13,79,79,0.85), rgba(26,143,143,0.75)), url('images/tour-cielo/EL_CIELO_MANTA_1.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 15px; }
+        .hero-content p { font-size: 1.3rem; margin-bottom: 30px; }
+        .hero-buttons { display: flex; gap: 15px; justify-content: center; }
+        .btn-hero { padding: 15px 35px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; }
         .btn-primary { background: var(--white); color: var(--primary); }
         .btn-whatsapp { background: #25D366; color: var(--white); }
-        
-        .tours { padding: 100px 50px; max-width: 1400px; margin: 0 auto; }
-        
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--primary); }
-        
-        .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        
-        .tour-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: transform 0.3s; }
-        .tour-card:hover { transform: translateY(-10px); }
-        
-        .tour-image { height: 250px; overflow: hidden; }
+        .tours { padding: 80px 50px; max-width: 1400px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); }
+        .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .tour-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .tour-image { height: 200px; overflow: hidden; }
         .tour-image img { width: 100%; height: 100%; object-fit: cover; }
-        
-        .tour-info { padding: 30px; }
-        .tour-badge { display: inline-block; background: var(--accent); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; }
-        .tour-info h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
-        .tour-meta { display: flex; gap: 20px; color: #666; font-size: 0.9rem; margin-bottom: 15px; }
-        .tour-meta i { color: var(--secondary); margin-right: 5px; }
-        .tour-price { font-size: 1.8rem; color: var(--secondary); font-weight: 700; }
-        .tour-link { display: inline-block; margin-top: 15px; color: var(--secondary); text-decoration: none; font-weight: 600; }
-        
-        footer { background: var(--dark); color: var(--white); padding: 60px 50px; }
-        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-        
+        .tour-info { padding: 20px; }
+        .tour-badge { display: inline-block; background: var(--accent); color: var(--dark); padding: 4px 12px; border-radius: 15px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; }
+        .tour-info h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
+        .tour-meta { display: flex; gap: 15px; color: #666; font-size: 0.85rem; margin-bottom: 10px; }
+        .tour-meta i { color: var(--secondary); margin-right: 4px; }
+        .tour-price { font-size: 1.5rem; color: var(--secondary); font-weight: 700; }
+        .tour-price span { font-size: 0.8rem; color: #666; font-weight: 400; }
+        footer { background: var(--dark); color: var(--white); padding: 40px 50px; text-align: center; }
+        .copyright { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content h1 { font-size: 2.2rem; }
             .nav-links { display: none; }
         }
     </style>
@@ -72,8 +51,7 @@
             <a href="index.html" class="logo">Maya <span>Sun</span> Tours</a>
             <ul class="nav-links">
                 <li><a href="#tours">Tours</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="https://wa.me/5299845899872">Reservar</a></li>
+                <li><a href="https://wa.me/5299845899872">WhatsApp</a></li>
             </ul>
         </div>
     </nav>
@@ -81,7 +59,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Descubre el Caribe Mexicano</h1>
-            <p>Experiencias únicas con mantarrayas, snorkeling y aventuras inplaceables</p>
+            <p>Los mejores tours en Riviera Maya</p>
             <div class="hero-buttons">
                 <a href="#tours" class="btn-hero btn-primary">Ver Tours</a>
                 <a href="https://wa.me/5299845899872" class="btn-hero btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -91,79 +69,116 @@
     
     <section class="tours" id="tours">
         <div class="section-title">
-            <h2>Nuestros Tours</h2>
+            <h2>Todos Nuestros Tours</h2>
         </div>
         
         <div class="tours-grid">
-            <!-- Tour al Cielo -->
             <div class="tour-card">
                 <div class="tour-image"><img src="images/tour-cielo/EL_CIELO_MANTA_1.jpg" alt="Tour al Cielo"></div>
                 <div class="tour-info">
-                    <span class="tour-badge">🌟 #1 Más Popular</span>
-                    <h3>Tour al Cielo - Mantarrayas</h3>
-                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 4-5 horas</span><span><i class="fas fa-users"></i> Grupo pequeño</span></div>
-                    <p style="color:#666;margin-bottom:15px;">Nada con mantarrayas gigantes en Cozumel</p>
+                    <span class="tour-badge">🌟 #1</span>
+                    <h3>Tour al Cielo</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 4-5h</span></div>
                     <div class="tour-price">$1,150 <span>MXN</span></div>
-                    <a href="#" class="tour-link">Ver detalles →</a>
                 </div>
             </div>
             
-            <!-- Chichen Itza -->
             <div class="tour-card">
                 <div class="tour-image"><img src="images/chichen-itza/kukulkan_1.jpg" alt="Chichen Itza"></div>
                 <div class="tour-info">
                     <span class="tour-badge">🏛️ Historia</span>
                     <h3>Chichen Itza</h3>
-                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 12 horas</span><span><i class="fas fa-users"></i> Guía bilingüe</span></div>
-                    <p style="color:#666;margin-bottom:15px;">Visita la maravilla del mundo maya</p>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 12h</span></div>
                     <div class="tour-price">$1,299 <span>MXN</span></div>
-                    <a href="#" class="tour-link">Ver detalles →</a>
                 </div>
             </div>
             
-            <!-- Isla Mujeres -->
-            <div class="tour-card">
-                <div class="tour-image"><img src="images/isla-mujeres/isla_1.jpg" alt="Isla Mujeres"></div>
-                <div class="tour-info">
-                    <span class="tour-badge">🏝️ Playa</span>
-                    <h3>Isla Mujeres</h3>
-                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 6 horas</span><span><i class="fas fa-users"></i> Catamarán</span></div>
-                    <p style="color:#666;margin-bottom:15px;">Día de playa y snorkel en Isla Mujeres</p>
-                    <div class="tour-price">$1,499 <span>MXN</span></div>
-                    <a href="#" class="tour-link">Ver detalles →</a>
-                </div>
-            </div>
-            
-            <!-- Tulum -->
             <div class="tour-card">
                 <div class="tour-image"><img src="images/tulum/tulum_1.jpg" alt="Tulum"></div>
                 <div class="tour-info">
                     <span class="tour-badge">🧉 Cultura</span>
                     <h3>Tulum + Cenote</h3>
-                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 5 horas</span><span><i class="fas fa-users"></i> Guía incluido</span></div>
-                    <p style="color:#666;margin-bottom:15px;">Ruinas mayas + nado en cenote</p>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 5h</span></div>
                     <div class="tour-price">$899 <span>MXN</span></div>
-                    <a href="#" class="tour-link">Ver detalles →</a>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/xcaret/xcaret_1.jpg" alt="Xcaret"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🎭 Parque</span>
+                    <h3>Xcaret</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 10h</span></div>
+                    <div class="tour-price">$2,099 <span>MXN</span></div>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/xel-ha/xelha_1.jpg" alt="Xel-Há"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🌊 Agua</span>
+                    <h3>Xel-Há</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 8h</span></div>
+                    <div class="tour-price">$1,499 <span>MXN</span></div>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/xplor/xplor_1.jpg" alt="Xplor"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🧗 Aventura</span>
+                    <h3>Xplor</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 6h</span></div>
+                    <div class="tour-price">$1,299 <span>MXN</span></div>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/dolphinaris/dolphin_1.jpg" alt="Dolphinaris"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🐬 Delfines</span>
+                    <h3>Dolphinaris</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 3h</span></div>
+                    <div class="tour-price">$1,899 <span>MXN</span></div>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/xenses/xenses_1.jpg" alt="Xenses"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🎪 Experiencia</span>
+                    <h3>Xenses</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 5h</span></div>
+                    <div class="tour-price">$899 <span>MXN</span></div>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/coco-bongo/coco_1.jpg" alt="Coco Bongo"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🎉 Fiesta</span>
+                    <h3>Coco Bongo</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 4h</span></div>
+                    <div class="tour-price">$1,299 <span>MXN</span></div>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-image"><img src="images/isla-mujeres/isla_1.jpg" alt="Isla Mujeres"></div>
+                <div class="tour-info">
+                    <span class="tour-badge">🏝️ Playa</span>
+                    <h3>Isla Mujeres</h3>
+                    <div class="tour-meta"><span><i class="fas fa-clock"></i> 6h</span></div>
+                    <div class="tour-price">$1,499 <span>MXN</span></div>
                 </div>
             </div>
         </div>
     </section>
     
-    <footer id="contacto">
-        <div class="footer-content">
-            <div>
-                <div class="logo" style="margin-bottom:20px;">Maya <span>Sun</span> Tours</div>
-                <p>Tu aventura comienza aquí.</p>
-            </div>
-            <div>
-                <h4 style="margin-bottom:15px;">Contacto</h4>
-                <p>📞 +52 984 589 9872</p>
-                <p>📧 hola@mayasuntours.com</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2024 Maya Sun Tours</p>
-        </div>
+    <footer>
+        <div class="logo" style="margin-bottom:15px;">Maya <span>Sun</span> Tours</div>
+        <p>📞 +52 984 589 9872 | hola@mayasuntours.com</p>
+        <p class="copyright">© 2024 Maya Sun Tours</p>
     </footer>
 </body>
 </html>
