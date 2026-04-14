@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Sun Tours - Tours Populares en el Caribe Mexicano</title>
+    <meta name="description" content="Los tours más populares de la Riviera Maya. Cozumel, Xcaret, Xplor, Chichen Itza y más.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+    <style>
+        /* Hero Carrusel */
+        .hero-carrusel { position: relative; height: 85vh; min-height: 600px; overflow: hidden; }
+        .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1s ease; }
+        .hero-slide.active { opacity: 1; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%); z-index: 1; }
+        .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; color: white; width: 90%; max-width: 900px; }
+        .hero-title { font-size: 3.8rem; font-weight: 800; margin-bottom: 20px; text-shadow: 0 4px 30px rgba(0,0,0,0.4); line-height: 1.1; }
+        .hero-subtitle { font-size: 1.5rem; margin-bottom: 35px; opacity: 0.95; text-shadow: 0 2px 15px rgba(0,0,0,0.3); }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .hero .btn { padding: 18px 40px; font-size: 1.1rem; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: #1ABC9C; color: white; }
+        .btn-primary:hover { background: #16A085; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26,188,156,0.4); }
+        .btn-secondary { background: white; color: #1E3A2F; }
+        .btn-secondary:hover { background: #1ABC9C; color: white; transform: translateY(-3px); }
+        
+        /* Dots */
+        .hero-dots { position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; gap: 12px; }
+        .hero-dot { width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; }
+        .hero-dot.active { background: white; transform: scale(1.4); }
+        .hero-dot:hover { background: #1ABC9C; }
+        
+        /* Flechas */
+        .hero-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; background: rgba(255,255,255,0.2); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; transition: all 0.3s; border: 2px solid rgba(255,255,255,0.3); }
+        .hero-arrow:hover { background: #1ABC9C; border-color: #1ABC9C; }
+        .hero-arrow.prev { left: 25px; }
+        .hero-arrow.next { right: 25px; }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .hero .btn { padding: 14px 28px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏝️</span>
+                <img src="images/logo.png" alt="Maya Sun Tours" style="height: 50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5299845899872" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Hero Carrusel -->
+    <header class="hero-carrusel">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1920&q=80')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">🏝️ Vive la Magia del Caribe</h1>
+                <p class="hero-subtitle">Los mejores tours en Cozumel, Xcaret, Tulum y más. Precios directos de proveedor.</p>
+                <div class="hero-buttons">
+                    <a href="paquetes.html" class="btn btn-primary">🌟 Ver Tours</a>
+                    <a href="https://wa.me/5299845899872" class="btn btn-secondary">📱 Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">🤿水下冒险</h1>
+                <p class="hero-subtitle">Snorkel en los arrecifes más hermosos del Caribe.</p>
+                <div class="hero-buttons">
+                    <a href="tour.html?id=catamaran-cozumel" class="btn btn-primary">⛵ Explorar</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=1920&q=80')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">🏛️ Historia Maya</h1>
+                <p class="hero-subtitle">Descubre Chichen Itza, Tulum y las pirámides sagrado.</p>
+                <div class="hero-buttons">
+                    <a href="tour.html?id=chichen-itza" class="btn btn-primary">🗿 Conocer</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=1920&q=80')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">🔥 Aventura Extrema</h1>
+                <p class="hero-subtitle">Xplor, tirolesas, vehículos anfibios y más adrenalina.</p>
+                <div class="hero-buttons">
+                    <a href="tour.html?id=xplor-dia" class="btn btn-primary">💪 Sentir Adrenalina</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dots -->
+        <div class="hero-dots">
+            <div class="hero-dot active" onclick="goToSlide(0)"></div>
+            <div class="hero-dot" onclick="goToSlide(1)"></div>
+            <div class="hero-dot" onclick="goToSlide(2)"></div>
+            <div class="hero-dot" onclick="goToSlide(3)"></div>
+        </div>
+        
+        <!-- Flechas -->
+        <div class="hero-arrow prev" onclick="prevSlide()">❮</div>
+        <div class="hero-arrow next" onclick="nextSlide()">❯</div>
+    </header>
+
+    <!-- Tours Destacados -->
+    <section class="featured-tours">
+        <div class="container">
+            <h2 class="section-title">🌟 Tours Más Populares</h2>
+            <div class="tours-grid">
+                
+                <!-- 1. Catamarán Cozumel -->
+                <div class="tour-card">
+                    <a href="tour.html?id=catamaran-cozumel">
+                        <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400&q=80')">
+                            <span class="tour-badge">⭐ Más Vendido</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3>⛵ Catamarán a Cozumel</h3>
+                            <p>Snorkel + Almuerzo + Día completo</p>
+                            <div class="tour-info">
+                                <span><i class="far fa-clock"></i> Full Day</span>
+                                <span><i class="fas fa-utensils"></i> Almuerzo</span>
+                            </div>
+                            <div class="tour-price">
+                                <span class="price">Desde $2,099 MXN</span>
+                                <span class="btn-book">Ver →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 2. Lancha Transparente -->
+                <div class="tour-card">
+                    <a href="tour.html?id=lancha-transparente">
+                        <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80')">
+                            <span class="tour-badge">🌟 Experiencia Única</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3>🚤 Lancha Transparente</h3>
+                            <p>El Cielo - ver estrellas marinas</p>
+                            <div class="tour-info">
+                                <span><i class="far fa-clock"></i> 2-3 horas</span>
+                                <span><i class="fas fa-star"></i> Top #1</span>
+                            </div>
+                            <div class="tour-price">
+                                <span class="price">Desde $899 MXN</span>
+                                <span class="btn-book">Ver →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 3. Xcaret Plus -->
+                <div class="tour-card">
+                    <a href="tour.html?id=xcaret-plus">
+                        <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=400&q=80')">
+                            <span class="tour-badge">🏆 #1 Parque</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3>🎢 Xcaret Plus</h3>
+                            <p>Ríos subterráneos + Show nocturno</p>
+                            <div class="tour-info">
+                                <span><i class="far fa-clock"></i> Full Day</span>
+                                <span><i class="fas fa-moon"></i> + Noche</span>
+                            </div>
+                            <div class="tour-price">
+                                <span class="price">Desde $2,799 MXN</span>
+                                <span class="btn-book">Ver →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 4. Xplor Día -->
+                <div class="tour-card">
+                    <a href="tour.html?id=xplor-dia">
+                        <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=400&q=80')">
+                            <span class="tour-badge">💪 Extremo</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3>🔥 Xplor Día</h3>
+                            <p>7 tirolesas + Ríos subterráneos</p>
+                            <div class="tour-info">
+                                <span><i class="far fa-clock"></i> Full Day</span>
+                                <span><i class="fas fa-mountain"></i> Aventura</span>
+                            </div>
+                            <div class="tour-price">
+                                <span class="price">Desde $2,499 MXN</span>
+                                <span class="btn-book">Ver →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 5. Chichen Itza -->
+                <div class="tour-card">
+                    <a href="tour.html?id=chichen-itza">
+                        <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=400&q=80')">
+                            <span class="tour-badge">🗿 Historia</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3>🏛️ Chichen Itza</h3>
+                            <p>La nueva maravilla del mundo</p>
+                            <div class="tour-info">
+                                <span><i class="far fa-clock"></i> 12 horas</span>
+                                <span><i class="fas fa-landmark"></i> Guía</span>
+                            </div>
+                            <div class="tour-price">
+                                <span class="price">Desde $1,299 MXN</span>
+                                <span class="btn-book">Ver →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 6. Coco Bongo -->
+                <div class="tour-card">
+                    <a href="tour.html?id=coco-bongo">
+                        <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&q=80')">
+                            <span class="tour-badge">🌙 Fiesta</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3>🎭 Coco Bongo</h3>
+                            <p>El show más famoso de Playa</p>
+                            <div class="tour-info">
+                                <span><i class="far fa-clock"></i> 4-5 horas</span>
+                                <span><i class="fas fa-music"></i> Live</span>
+                            </div>
+                            <div class="tour-price">
+                                <span class="price">Desde $1,999 MXN</span>
+                                <span class="btn-book">Ver →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="why-us" style="padding: 80px 0; background: linear-gradient(135deg, #f8f9fa, #e8f8f5);">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 50px; font-size: 2.2rem; color: #1E3A2F;">🌟 ¿Por Qué Elegirnos?</h2>
+            <div class="why-us-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+                <div class="why-us-card" style="background: white; padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: all 0.3s;">
+                    <i class="fas fa-tag" style="font-size: 2.5rem; color: #1ABC9C; margin-bottom: 20px;"></i>
+                    <h3 style="color: #1E3A2F; margin-bottom: 12px; font-size: 1.2rem;">💰 Precios de Proveedor</h3>
+                    <p style="color: #666; font-size: 0.95rem;">Sin intermediarios - ahorra hasta un 30%</p>
+                </div>
+                <div class="why-us-card" style="background: white; padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: all 0.3s;">
+                    <i class="fas fa-headset" style="font-size: 2.5rem; color: #1ABC9C; margin-bottom: 20px;"></i>
+                    <h3 style="color: #1E3A2F; margin-bottom: 12px; font-size: 1.2rem;">📱 Soporte 24/7</h3>
+                    <p style="color: #666; font-size: 0.95rem;">Siempre disponibles por WhatsApp</p>
+                </div>
+                <div class="why-us-card" style="background: white; padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: all 0.3s;">
+                    <i class="fas fa-star" style="font-size: 2.5rem; color: #F4D03F; margin-bottom: 20px;"></i>
+                    <h3 style="color: #1E3A2F; margin-bottom: 12px; font-size: 1.2rem;">⭐ 4.9 Estrellas</h3>
+                    <p style="color: #666; font-size: 0.95rem;">2,500+ clientes satisfechos</p>
+                </div>
+                <div class="why-us-card" style="background: white; padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.08); transition: all 0.3s;">
+                    <i class="fas fa-calendar-check" style="font-size: 2.5rem; color: #1ABC9C; margin-bottom: 20px;"></i>
+                    <h3 style="color: #1E3A2F; margin-bottom: 12px; font-size: 1.2rem;">📝 Reserva Fácil</h3>
+                    <p style="color: #666; font-size: 0.95rem;">Solo 30% depósito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section style="padding: 80px 0; background: #1E3A2F; color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 50px;">💬 Lo que dicen nuestros clientes</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 20px; opacity: 0.9;">"La mejor experiencia de nuestro viaje. El equipo muy profesional y los precios excellent."</p>
+                    <div style="color: #F4D03F;">⭐⭐⭐⭐⭐</div>
+                    <p style="margin-top: 10px; font-weight: 600;">- María G., Ciudad de México</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 20px; opacity: 0.9;">"Increíble Tour a Chichen Itza. Nuestra guía Ana hizo la historia fascinante."</p>
+                    <div style="color: #F4D03F;">⭐⭐⭐⭐⭐</div>
+                    <p style="margin-top: 10px; font-weight: 600;">- Carlos R., Guadalajara</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 20px; opacity: 0.9;">"Xcaret fue mágico. La Organización perfecta, volvimos recomendados."</p>
+                    <div style="color: #F4D03F;">⭐⭐⭐⭐⭐</div>
+                    <p style="margin-top: 10px; font-weight: 600;">- Ana L., Monterrey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #1ABC9C, #16A085); padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; color: white; margin-bottom: 20px;">🎉 ¿Listo para tu Aventura?</h2>
+            <p style="font-size: 1.2rem; color: white; opacity: 0.95; margin-bottom: 30px;">Vive experiencias únicas en el Caribe mexicano</p>
+            <a href="https://wa.me/5299845899872" style="display: inline-flex; align-items: center; gap: 12px; background: white; color: #1ABC9C; padding: 18px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <i class="fab fa-whatsapp"></i> Chatear Ahora
+            </a>
+            <p style="color: white; opacity: 0.8; margin-top: 20px; font-size: 0.9rem;">Respuesta inmediata • Confirmación instantánea</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🏝️ Maya Sun Tours</h4>
+                    <p>Los mejores tours del Caribe.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="paquetes.html">Paquetes</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +52 984 589 9872</li>
+                        <li><i class="fas fa-envelope"></i> hola@rivieramaya-adventures.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Sun Tours</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5299845899872" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        function goToSlide(index) {
+            showSlide(index);
+        }
+        
+        // Autoadvance cada 5 segundos
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes Turísticos | Maya Sun Tours</title>
+    <meta name="description" content="Explora todos nuestros tours y paquetes turísticos en la Riviera Maya. Cozumel, Xcaret, Xplor, Tours acuáticos y más.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏝️</span>
+                <img src="images/logo.png" alt="Maya Sun Tours" style="height: 50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paquetes.html" class="active">Paquetes</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5299845899872" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🏝️ Tours & Experiencias</h1>
+            <p>Los mejores tours de la Riviera Maya con precios directos de proveedor</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="cozumel">
+                    <i class="fas fa-anchor"></i> Cozumel
+                </button>
+                <button class="filter-btn" data-filter="chichen">
+                    <i class="fas fa-landmark"></i> Chichen Itza
+                </button>
+                <button class="filter-btn" data-filter="isla">
+                    <i class="fas fa-island"></i> Isla Mujeres
+                </button>
+                <button class="filter-btn" data-filter="parques">
+                    <i class="fas fa-rocket"></i> Parques
+                </button>
+                <button class="filter-btn" data-filter="noche">
+                    <i class="fas fa-moon"></i> Vida Nocturna
+                </button>
+                <button class="filter-btn" data-filter="aventura">
+                    <i class="fas fa-mountain"></i> Aventura
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Grid -->
+    <section class="tours-section">
+        <div class="container">
+            <div class="tours-grid-full">
+                
+                <!-- COZUMEL CATAMARAN -->
+                <div class="tour-card-full" data-category="cozumel">
+                    <a href="tour.html?id=catamaran-cozumel">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80')">
+                            <span class="tour-badge">⭐ Más Vendido</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">⛵ Cozumel</div>
+                            <h3>⛵ Catamarán Snorkel & Lunch</h3>
+                            <p>Navega hacia Cozumel en catamarán exclusivo. Snorkeling en arrecifes espectaculares y almuerzo buffet con barra libre.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day (8h)</li>
+                                <li><i class="fas fa-utensils"></i> Almuerzo</li>
+                                <li><i class="fas fa-swimmer"></i> Snorkel</li>
+                                <li><i class="fas fa-glass-cheers"></i> Barra libre</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$2,099 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- LANCHA TRANSPARENTE -->
+                <div class="tour-card-full" data-category="cozumel">
+                    <a href="tour.html?id=lancha-transparente">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80')">
+                            <span class="tour-badge">🌟 Experiencia Única</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">⛵ Cozumel</div>
+                            <h3>🚤 Lancha Transparente - El Cielo</h3>
+                            <p>Navega en lancha de cristal por las aguas más turquesas. Ve estrellas marinas en El Cielo sin mojarte.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 2-3 horas</li>
+                                <li><i class="fas fa-beer"></i> 2 cervezas</li>
+                                <li><i class="fas fa-ferry"></i> Ferry incluido</li>
+                                <li><i class="fas fa-child"></i> Niños gratis</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$499 MXN</span>
+                                    <span class="price-person">/ adulto y menor</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- TOUR AL CIELO -->
+                <div class="tour-card-full" data-category="cozumel">
+                    <a href="tour.html?id=tour-al-cielo">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80')">
+                            <span class="tour-badge">🐠 Snorkel Paradise</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">⛵ Cozumel</div>
+                            <h3>⛵ Tour al Cielo - Lancha</h3>
+                            <p>El famoso tour a El Cielo. Navega en lancha rápida, visita El Cielito, El Patio y Palancar.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 4 horas</li>
+                                <li><i class="fas fa-swimmer"></i> Snorkel</li>
+                                <li><i class="fas fa-beer"></i> Bebidas</li>
+                                <li><i class="fas fa-umbrella-beach"></i> Playa Mía</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,199 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- DOLPHINARIS -->
+                <div class="tour-card-full" data-category="cozumel">
+                    <a href="tour.html?id=dolphinaris">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80')">
+                            <span class="tour-badge">🐬 Nado con Delfines</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">⛵ Cozumel</div>
+                            <h3>🐬 Dolphinaris Cozumel</h3>
+                            <p>Nada con delfines en su hábitat natural. Two programs: Interacción (30 min) u Ocean Secret (45 min).</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 30-45 min</li>
+                                <li><i class="fas fa-water"></i> Nado</li>
+                                <li><i class="fas fa-camera"></i> Fotos</li>
+                                <li><i class="fas fa-tshirt"></i> Traje</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,999 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CHICHEN ITZA CLASICO -->
+                <div class="tour-card-full" data-category="chichen">
+                    <a href="tour.html?id=chichen-itza">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80')">
+                            <span class="tour-badge">🏛️ Nueva Maravilla</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🏛️ Chichen Itza</div>
+                            <h3>🏛️ Chichen Itza Clásico</h3>
+                            <p>Visita la nueva maravilla del mundo. Pirámide de Kukulkan, cenote sagrado y guía especializado.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day</li>
+                                <li><i class="fas fa-bus"></i> Transporte</li>
+                                <li><i class="fas fa-utensils"></i> Comida</li>
+                                <li><i class="fas fa-swimmer"></i> Cenote</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Adulto:</span>
+                                    <span class="price-amount">$1,299 MXN</span>
+                                    <span class="price-person">/ Niño: $999</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CHICHEN ITZA DELUXE -->
+                <div class="tour-card-full" data-category="chichen">
+                    <a href="tour.html?id=chichen-itza-deluxe">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80')">
+                            <span class="tour-badge">👑 Premium</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🏛️ Chichen Itza</div>
+                            <h3>👑 Chichen Itza Deluxe</h3>
+                            <p>Experiencia premium con guía privado, acceso exclusivo, lunch gourmet y cenote premium.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day</li>
+                                <li><i class="fas fa-user-tie"></i> Guía privado</li>
+                                <li><i class="fas fa-utensils"></i> Lunch gourmet</li>
+                                <li><i class="fas fa-gem"></i> Acceso VIP</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Adulto:</span>
+                                    <span class="price-amount">$1,799 MXN</span>
+                                    <span class="price-person">/ Niño: $1,399</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ISLA MUJERES CARIBBEAN -->
+                <div class="tour-card-full" data-category="isla">
+                    <a href="tour.html?id=isla-mujeres-caribbean">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80')">
+                            <span class="tour-badge">🏝️ Isla Paradise</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🏝️ Isla Mujeres</div>
+                            <h3>🚤 Isla Mujeres Caribbean</h3>
+                            <p>Crucero por la bahía. Snorkel en arrecife, faro y Playa Norte. Barra libre y comida a bordo.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 5 horas</li>
+                                <li><i class="fas fa-glass-cheers"></i> Barra libre</li>
+                                <li><i class="fas fa-utensils"></i> Comida</li>
+                                <li><i class="fas fa-swimmer"></i> Snorkel</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,499 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ISLA MUJERES PRIME -->
+                <div class="tour-card-full" data-category="isla">
+                    <a href="tour.html?id=isla-mujeres-prime">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80')">
+                            <span class="tour-badge">⭐ Premium</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🏝️ Isla Mujeres</div>
+                            <h3>🏝️ Isla Mujeres Prime</h3>
+                            <p>Experiencia premium. Lancha rápida, múltiples snorkels, visita a Contoy y lunch gourmet.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day</li>
+                                <li><i class="fas fa-fish"></i> 2 arrecifes</li>
+                                <li><i class="fas fa-utensils"></i> Lunch gourmet</li>
+                                <li><i class="fas fa-camera"></i> Fotos</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,899 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- XCARET PLUS -->
+                <div class="tour-card-full" data-category="parques">
+                    <a href="tour.html?id=xcaret-plus">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80')">
+                            <span class="tour-badge">🎢 #1 Parque</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🎢 Parques</div>
+                            <h3>🎢 Xcaret Plus</h3>
+                            <p>El parque mexicano por excelencia. 3 ríos subterráneos, show nocturno, buffet y 50+ atracciones.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day</li>
+                                <li><i class="fas fa-water"></i> 3 ríos</li>
+                                <li><i class="fas fa-utensils"></i> Buffet</li>
+                                <li><i class="fas fa-moon"></i> Show noche</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Adulto:</span>
+                                    <span class="price-amount">$2,799 MXN</span>
+                                    <span class="price-person">/ Niño: $1,999</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- XPLOR DÍA -->
+                <div class="tour-card-full" data-category="parques">
+                    <a href="tour.html?id=xplor-dia">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80')">
+                            <span class="tour-badge">🔥 Extremo</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🎢 Parques</div>
+                            <h3>🔥 Xplor Día</h3>
+                            <p>7 tirolesas, vehículos anfibios, nado en ríos subterráneos y balsas. Aventura extrema.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day</li>
+                                <li><i class="fas fa-plane-departure"></i> 7 tirolesas</li>
+                                <li><i class="fas fa-truck-monster"></i> Vehículos</li>
+                                <li><i class="fas fa-utensils"></i> Comida</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Adulto:</span>
+                                    <span class="price-amount">$2,499 MXN</span>
+                                    <span class="price-person">/ Niño: $1,849</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- XEL HA -->
+                <div class="tour-card-full" data-category="parques">
+                    <a href="tour.html?id=xel-ha">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80')">
+                            <span class="tour-badge">🌊 Acuático</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🎢 Parques</div>
+                            <h3>🌊 Xel Ha</h3>
+                            <p>Parque acuático natural más grande. Snorkel ilimitado, cliff jumping, slackline y 20+ actividades.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> Full Day</li>
+                                <li><i class="fas fa-swimmer"></i> Snorkel</li>
+                                <li><i class="fas fa-utensils"></i> Comida</li>
+                                <li><i class="fas fa-infinity"></i> Actividades</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Adulto:</span>
+                                    <span class="price-amount">$1,999 MXN</span>
+                                    <span class="price-person">/ Niño: $1,499</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- XENSES -->
+                <div class="tour-card-full" data-category="parques">
+                    <a href="tour.html?id=xenses">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80')">
+                            <span class="tour-badge">🎭 Sensorial</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🎢 Parques</div>
+                            <h3>🎭 Xenses</h3>
+                            <p>Parque de los sentidos. 50+ atracciones que juegan con tus sentidos. Río lento y tirolesas.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 5 horas</li>
+                                <li><i class="fas fa-sensor"></i> 50+ actos</li>
+                                <li><i class="fas fa-water"></i> Río lento</li>
+                                <li><i class="fas fa-camera"></i> Fotos</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Adulto:</span>
+                                    <span class="price-amount">$1,099 MXN</span>
+                                    <span class="price-person">/ Niño: $849</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- COCO BONGO -->
+                <div class="tour-card-full" data-category="noche">
+                    <a href="tour.html?id=coco-bongo">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80')">
+                            <span class="tour-badge">🎭 Show + Fiesta</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🌙 Vida Nocturna</div>
+                            <h3>🎭 Coco Bongo</h3>
+                            <p>El show más famoso de Playa del Carmen. Shows en vivo, acrobacias, espuma y la mejor fiesta.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 4-5 horas</li>
+                                <li><i class="fas fa-music"></i> Shows</li>
+                                <li><i class="fas fa-glass-cheers"></i> Bebidas</li>
+                                <li><i class="fas fa-crown"></i> VIP</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,999 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- AKUMAL -->
+                <div class="tour-card-full" data-category="cozumel">
+                    <a href="tour.html?id=akumal">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80')">
+                            <span class="tour-badge">🐢 Tortugas</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🐢 Naturaleza</div>
+                            <h3>🐢 Akumal + Comida</h3>
+                            <p>Nada con tortugas marinas en su hábitat natural. Snorkel en uno de los pocos lugares con tortugas.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 3-4 horas</li>
+                                <li><i class="fas fa-swimmer"></i> Tortugas</li>
+                                <li><i class="fas fa-utensils"></i> Comida</li>
+                                <li><i class="fas fa-goggles"></i> Equipo</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,099 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- MAYA ADRENALINE -->
+                <div class="tour-card-full" data-category="aventura">
+                    <a href="tour.html?id=maya-adrenaline">
+                        <div class="tour-image-full" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80')">
+                            <span class="tour-badge">🏎️ Extremo</span>
+                        </div>
+                        <div class="tour-content-full">
+                            <div class="tour-category">🌋 Aventura</div>
+                            <h3>🏎️ Maya Adrenaline</h3>
+                            <p>Aventura 3 en 1: ATVs por la selva, tirolesas sobre cenotes y nado en cenote cristalino.</p>
+                            <ul class="tour-details">
+                                <li><i class="far fa-clock"></i> 4 horas</li>
+                                <li><i class="fas fa-truck-monster"></i> ATVs</li>
+                                <li><i class="fas fa-plane-departure"></i> Tirolesas</li>
+                                <li><i class="fas fa-swimmer"></i> Cenote</li>
+                            </ul>
+                            <div class="tour-price-full">
+                                <div class="price-info">
+                                    <span class="price-label">Desde</span>
+                                    <span class="price-amount">$1,599 MXN</span>
+                                    <span class="price-person">/ adulto</span>
+                                </div>
+                                <span class="btn-book">Ver Detalle →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>🎯 ¿No encuentras lo que buscas?</h2>
+            <p>Contáctanos y creamos un paquete personalizado para ti</p>
+            <a href="https://wa.me/5299845899872" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chatear en WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Maya Sun Tours</h4>
+                    <p>Los mejores tours de la Riviera Maya con precios directos de proveedor. Reserva fácil y segura.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="paquetes.html"><i class="fas fa-chevron-right"></i> Paquetes</a></li>
+                        <li><a href="experiencias.html"><i class="fas fa-chevron-right"></i> Experiencias</a></li>
+                        <li><a href="sobre-nosotros.html"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Tours</h4>
+                    <ul>
+                        <li><a href="tour.html?id=xcaret-plus"><i class="fas fa-chevron-right"></i> Xcaret Plus</a></li>
+                        <li><a href="tour.html?id=xplor-dia"><i class="fas fa-chevron-right"></i> Xplor Día</a></li>
+                        <li><a href="tour.html?id=chichen-itza"><i class="fas fa-chevron-right"></i> Chichen Itza</a></li>
+                        <li><a href="tour.html?id=catamaran-cozumel"><i class="fas fa-chevron-right"></i> Cozumel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +52 984 589 9872</li>
+                        <li><i class="far fa-envelope"></i> hola@rivieramaya-adventures.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Playa del Carmen, Quintana Roo</li>
+                        <li><i class="far fa-clock"></i> 7:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Sun Tours. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5299845899872" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const tours = document.querySelectorAll('.tour-card-full');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                tours.forEach(tour => {
+                    if (filter === 'all' || tour.dataset.category === filter) {
+                        tour.style.display = 'block';
+                        tour.style.animation = 'fadeInUp 0.5s ease-out';
+                    } else {
+                        tour.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

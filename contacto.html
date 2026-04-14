@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Maya Sun Tours</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+    <style>
+        .contact-hero { background: linear-gradient(135deg, #1ABC9C, #1E3A2F); padding: 120px 0 80px; text-align: center; color: white; }
+        .contact-hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .contact-hero p { font-size: 1.3rem; opacity: 0.95; }
+        
+        .contact-main-section { padding: 60px 0; }
+        .contact-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        
+        .contact-form-new { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
+        .contact-form-new h2 { color: #1E3A2F; margin-bottom: 25px; font-size: 1.8rem; }
+        .form-group-new { margin-bottom: 20px; }
+        .form-group-new label { display: block; color: #1E3A2F; font-weight: 600; margin-bottom: 8px; }
+        .form-group-new input, .form-group-new select, .form-group-new textarea { width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group-new input:focus, .form-group-new select:focus, .form-group-new textarea:focus { outline: none; border-color: #1ABC9C; }
+        .form-group-new textarea { resize: vertical; min-height: 120px; }
+        .btn-submit-new { width: 100%; padding: 18px; font-size: 1.1rem; border-radius: 30px; margin-top: 10px; }
+        
+        .contact-info-new { display: flex; flex-direction: column; gap: 25px; }
+        .contact-card-new { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px; }
+        .contact-card-new .icon-box { width: 60px; height: 60px; background: linear-gradient(135deg, #1ABC9C, #16A085); border-radius: 15px; display: flex; align-items: center; justify-content: center; }
+        .contact-card-new .icon-box i { font-size: 1.5rem; color: white; }
+        .contact-card-new h3 { color: #1E3A2F; margin-bottom: 5px; }
+        .contact-card-new p { color: #777; margin-bottom: 8px; }
+        .contact-card-new a { color: #1ABC9C; font-weight: 600; }
+        
+        .whatsapp-highlight { background: linear-gradient(135deg, #25D366, #128C7E); padding: 30px; border-radius: 15px; color: white; text-align: center; }
+        .whatsapp-highlight i { font-size: 2.5rem; margin-bottom: 15px; }
+        .whatsapp-highlight h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .whatsapp-highlight p { opacity: 0.9; margin-bottom: 15px; }
+        .whatsapp-highlight a { display: inline-block; background: white; color: #25D366; padding: 15px 30px; border-radius: 25px; font-weight: 700; }
+        
+        .faq-section-new { background: #f8f9fa; padding: 60px 0; }
+        .faq-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .faq-item-new { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-item-new h3 { color: #1E3A2F; margin-bottom: 10px; font-size: 1.1rem; }
+        .faq-item-new p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+        
+        @media (max-width: 900px) {
+            .contact-grid-2, .faq-grid-new { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏝️</span>
+                <img src="images/logo.png" alt="Maya Sun Tours" style="height: 50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5299845899872" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>📱 Contáctanos</h1>
+            <p>Estamos aquí para hacer tu viaje soñado realidad</p>
+        </div>
+    </section>
+
+    <section class="contact-main-section">
+        <div class="container">
+            <div class="contact-grid-2">
+                <!-- Formulario -->
+                <div class="contact-form-new">
+                    <h2>✉️ Envíanos un Mensaje</h2>
+                    <form id="contactForm">
+                        <div class="form-group-new">
+                            <label>👤 Tu Nombre</label>
+                            <input type="text" placeholder="¿Cómo te llamas?" required>
+                        </div>
+                        <div class="form-group-new">
+                            <label>📧 Tu Email</label>
+                            <input type="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group-new">
+                            <label>📱 Tu WhatsApp</label>
+                            <input type="tel" placeholder="+52 984 000 0000">
+                        </div>
+                        <div class="form-group-new">
+                            <label>🎯 Tour de interés</label>
+                            <select>
+                                <option value="">Selecciona un tour...</option>
+                                <option value="catamaran">⛵ Catamarán a Cozumel</option>
+                                <option value="lancha">🚤 Lancha Transparente</option>
+                                <option value="xcaret">🎢 Xcaret Plus</option>
+                                <option value="xplor">🔥 Xplor Día</option>
+                                <option value="chichen">🏛️ Chichen Itza</option>
+                                <option value="coco">🎭 Coco Bongo</option>
+                                <option value="otro">❓ Otro tour</option>
+                            </select>
+                        </div>
+                        <div class="form-group-new">
+                            <label>💬 Tu Mensaje</label>
+                            <textarea placeholder="¿Cuándo quieres viajar? ¿Cuántas personas? Cuéntanos sobre tu aventura soñada..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit-new">
+                            📨 Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info de contacto -->
+                <div class="contact-info-new">
+                    <div class="whatsapp-highlight">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>💚 ¿Prefieres WhatsApp?</h3>
+                        <p>Chatea con nosotros directamente - respondemos en minutos</p>
+                        <a href="https://wa.me/5299845899872" target="_blank">Abrir WhatsApp</a>
+                    </div>
+
+                    <div class="contact-card-new">
+                        <div class="icon-box"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h3>📞 Teléfono</h3>
+                            <p>+52 984 589 9872</p>
+                            <a href="tel:+529845899872">Llamar ahora</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-new">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>📧 Email</h3>
+                            <p>hola@rivieramaya-adventures.com</p>
+                            <a href="mailto:hola@rivieramaya-adventures.com">Enviar email</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-new">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>📍 Ubicación</h3>
+                            <p>Playa del Carmen, Quintana Roo</p>
+                            <p>México</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-new">
+                        <div class="icon-box"><i class="far fa-clock"></i></div>
+                        <div>
+                            <h3>🕐 Horario</h3>
+                            <p>Lunes a Domingo</p>
+                            <p>7:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; padding: 20px;">
+                        <h3>🌐 Síguenos</h3>
+                        <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px;">
+                            <a href="#" style="width: 50px; height: 50px; background: linear-gradient(135deg, #E1306C, #C13584); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1877F2, #0D5FBF); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="width: 50px; height: 50px; background: linear-gradient(135deg, #000000, #333); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section-new">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">❓ Preguntas Frecuentes</h2>
+            <div class="faq-grid-new">
+                <div class="faq-item-new">
+                    <h3>🤔 ¿Cómo reservo un tour?</h3>
+                    <p>Escríbenos por WhatsApp al +52 984 589 9872. Te pedimos un depósito del 30% para confirmar tu reservación. El resto lo pagas en destino.</p>
+                </div>
+                <div class="faq-item-new">
+                    <h3>📅 ¿Cuál es la política de cancelación?</h3>
+                    <p>48+ horas antes: Reembolso completo. 24-48 horas: 50% reembolso. Menos de 24 horas: Sin reembolso.</p>
+                </div>
+                <div class="faq-item-new">
+                    <h3>💰 ¿Los precios incluyen impuestos?</h3>
+                    <p>La mayoría incluyen impuestos. Algunos tours de Cozumel tienen impuesto de parque que se paga en destino ($217 MXN).</p>
+                </div>
+                <div class="faq-item-new">
+                    <h3>🚌 ¿Ofrecen transportación?</h3>
+                    <p>¡Sí! La mayoría de nuestros tours incluyen transporte desde tu hotel en la zona de Playa del Carmen y Riviera Maya.</p>
+                </div>
+                <div class="faq-item-new">
+                    <h3>👶 ¿Puedo llevar niños?</h3>
+                    <p>¡Por supuesto! La mayoría de nuestros tours son familiares. Algunos tienen restricciones de edad - consultanos antes.</p>
+                </div>
+                <div class="faq-item-new">
+                    <h3>🎒 ¿Qué debo llevar al tour?</h3>
+                    <p>Ropa de baño, protector solar biodegradável, toalla, cámara, dinero en efectivo para propinas e impuestos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🏝️ Maya Sun Tours</h4>
+                    <p>Creando memorias extraordinarias.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="paquetes.html">Paquetes</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +52 984 589 9872</li>
+                        <li><i class="fas fa-envelope"></i> hola@rivieramaya-adventures.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Sun Tours. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5299845899872" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

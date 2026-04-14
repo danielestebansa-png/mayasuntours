@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Maya Sun Tours</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+    <style>
+        .about-hero { background: linear-gradient(135deg, #1ABC9C, #1E3A2F); padding: 120px 0 80px; text-align: center; color: white; }
+        .about-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .about-hero p { font-size: 1.3rem; opacity: 0.95; }
+        
+        .about-section { padding: 80px 0; }
+        .about-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { color: #1E3A2F; font-size: 2rem; margin-bottom: 25px; }
+        .about-text p { color: #555; line-height: 1.9; font-size: 1.05rem; margin-bottom: 20px; }
+        .about-image { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .about-image img { width: 100%; height: 400px; object-fit: cover; }
+        
+        .mission-vision-section { background: #f8f9fa; padding: 80px 0; }
+        .mv-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .mv-card-big { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .mv-card-big i { font-size: 3rem; color: #1ABC9C; margin-bottom: 20px; }
+        .mv-card-big h3 { color: #1E3A2F; font-size: 1.5rem; margin-bottom: 15px; }
+        .mv-card-big p { color: #555; line-height: 1.8; }
+        
+        .values-showcase { padding: 80px 0; }
+        .values-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .value-card-pro { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .value-card-pro:hover { transform: translateY(-10px); }
+        .value-card-pro i { font-size: 2.5rem; color: #1ABC9C; margin-bottom: 20px; }
+        .value-card-pro h3 { color: #1E3A2F; margin-bottom: 12px; }
+        .value-card-pro p { color: #777; font-size: 0.95rem; }
+        
+        .stats-pro { background: linear-gradient(135deg, #1E3A2F, #1ABC9C); padding: 60px 0; }
+        .stats-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; color: white; }
+        .stat-pro i { font-size: 2.5rem; margin-bottom: 15px; }
+        .stat-pro .stat-num { font-size: 2.5rem; font-weight: 800; }
+        .stat-pro .stat-desc { opacity: 0.9; }
+        
+        .why-us-pro { padding: 80px 0; background: #f8f9fa; }
+        .why-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .why-card-pro { background: white; padding: 30px; border-radius: 15px; text-align: center; }
+        .why-card-pro .why-icon { width: 70px; height: 70px; background: #e8f8f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .why-card-pro .why-icon i { font-size: 1.8rem; color: #1ABC9C; }
+        .why-card-pro h3 { color: #1E3A2F; margin-bottom: 10px; }
+        .why-card-pro p { color: #777; font-size: 0.9rem; }
+        
+        .cta-pro { background: linear-gradient(135deg, #1ABC9C, #16A085); padding: 80px 0; text-align: center; color: white; }
+        .cta-pro h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .cta-pro p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; }
+        
+        @media (max-width: 900px) {
+            .about-grid-2, .mv-grid-2, .values-grid-4, .stats-grid-4, .why-grid-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏝️</span>
+                <img src="images/logo.png" alt="Maya Sun Tours" style="height: 50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="sobre-nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5299845899872" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>🏝️ Conoce Nuestra Historia</h1>
+            <p>Somos más que una agencia de tours - somos creadores de memorias auténticas</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid-2">
+                <div class="about-text">
+                    <h2>🌟 Nuestra Historia</h2>
+                    <p>🏪 <strong>Maya Sun Tours</strong> nació en el corazón de Playa del Carmen con una visión clara: <strong>conectar a los viajeros con la magia real del Caribe mexicano</strong>, sin intermediarios ni precios inflados.</p>
+                    <p>👨‍👩‍👧‍👦 Fundamos esta empresa con la convicción de que cada persona merece vivir experiencias auténticas. Nuestro equipo está formado por profesionales del turismo con años de experiencia, guías locales certificados y amantes del Caribe que conocen cada secreto de esta región.</p>
+                    <p>🎯 <strong>Nuestra filosofía:</strong> No vendemos tours - creamos memorias que duran toda la vida. Cada experiencia está diseñada para superar expectativas y dejar una huella imborrable en tu corazón.</p>
+                    <p>🤝 Creemos en relaciones duraderas con nuestros clientes. Por eso el 98% de nuestras reservas vienen de recomendaciones de clientes satisfechos.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80" alt="Riviera Maya">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="mv-grid-2">
+                <div class="mv-card-big">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>🎯 Nuestra Misión</h3>
+                    <p>Brindar experiencias turísticas extraordinarias en el Caribe mexicano, conectando a nuestros clientes con la riqueza natural, cultural y aventura de la Riviera Maya. Ofrecemos <strong>precios directos de proveedor</strong> con un servicio al cliente excepcional que supera expectativas en cada interacción.</p>
+                </div>
+                <div class="mv-card-big">
+                    <i class="fas fa-eye"></i>
+                    <h3>🔭 Nuestra Visión</h3>
+                    <p>Ser la empresa de tours más confiable y recomendada de toda la Riviera Maya. Buscamos establecer el estándar de excelencia en el turismo local, siendo reconocidos por:</p>
+                    <p>✅ Precios justos y transparentes<br>✅ Experiencias auténticas y memorables<br>✅ Atención al cliente 24/7<br>✅ Compromiso con la sostenibilidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-showcase">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">💎 Nuestros Valores</h2>
+            <div class="values-grid-4">
+                <div class="value-card-pro">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>💰 Precios Justos</h3>
+                    <p>Directo de proveedor, sin intermediarios ni comisiones ocultas. Siempre el mejor precio.</p>
+                </div>
+                <div class="value-card-pro">
+                    <i class="fas fa-certificate"></i>
+                    <h3>✅ Calidad Garantizada</h3>
+                    <p>Proveedores certificados y verificados. Seguridad y professionalism en cada tour.</p>
+                </div>
+                <div class="value-card-pro">
+                    <i class="fas fa-clock"></i>
+                    <h3>⏰ Disponibilidad 24/7</h3>
+                    <p>Siempre disponibles por WhatsApp para resolver tus dudas y atender emergencias.</p>
+                </div>
+                <div class="value-card-pro">
+                    <i class="fas fa-heart"></i>
+                    <h3>❤️ Pasión Real</h3>
+                    <p>Amamos lo que hacemos y eso se nota en cada detalle de tu experiencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-pro">
+        <div class="container">
+            <div class="stats-grid-4">
+                <div class="stat-pro">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-num">2,500+</div>
+                    <div class="stat-desc">Clientes Felices</div>
+                </div>
+                <div class="stat-pro">
+                    <i class="fas fa-map"></i>
+                    <div class="stat-num">15+</div>
+                    <div class="stat-desc">Tours Diferentes</div>
+                </div>
+                <div class="stat-pro">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-num">4.9</div>
+                    <div class="stat-desc">Rating Promedio</div>
+                </div>
+                <div class="stat-pro">
+                    <i class="fas fa-heart"></i>
+                    <div class="stat-num">98%</div>
+                    <div class="stat-desc">Nos Recomienda</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us-pro">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">🤔 ¿Por Qué Elegirnos?</h2>
+            <div class="why-grid-4">
+                <div class="why-card-pro">
+                    <div class="why-icon"><i class="fas fa-percent"></i></div>
+                    <h3>Mejor Precio</h3>
+                    <p>Precios directo de proveedor, sin intermediarios</p>
+                </div>
+                <div class="why-card-pro">
+                    <div class="why-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Atención WhatsApp</h3>
+                    <p>Respuesta inmediata, 24/7</p>
+                </div>
+                <div class="why-card-pro">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Reservas Seguras</h3>
+                    <p>Pago en destino, cancelaciones flexibles</p>
+                </div>
+                <div class="why-card-pro">
+                    <div class="why-icon"><i class="fas fa-map-pin"></i></div>
+                    <h3>Expertos Locales</h3>
+                    <p>Guía conoce cada rincón秘密</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-pro">
+        <div class="container">
+            <h2>🎉 ¿Listo para Vivir la Aventura?</h2>
+            <p>Únete a más de 2,500 viajeros que ya vivieron la magia de la Riviera Maya</p>
+            <a href="https://wa.me/5299845899872" class="btn btn-white" style="font-size: 1.2rem; padding: 18px 40px;">
+                <i class="fab fa-whatsapp"></i> Escríbenos Ahora
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🏝️ Maya Sun Tours</h4>
+                    <p>Creando memorias extraordinarias desde 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="paquetes.html">Paquetes</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +52 984 589 9872</li>
+                        <li><i class="fas fa-envelope"></i> hola@rivieramaya-adventures.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Playa del Carmen, QRoo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Sun Tours. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5299845899872" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

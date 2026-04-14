@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias Únicas | Maya Sun Tours</title>
+    <meta name="description" content="Las mejores experiencias en la Riviera Maya. Actividades únicas, tours especiales y aventuras memorables.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+    <style>
+        .page-header { background: linear-gradient(135deg, #1ABC9C, #16A085); padding: 80px 0 60px; text-align: center; color: white; }
+        .page-header h1 { font-size: 2.8rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.2rem; opacity: 0.95; }
+        
+        .exp-filters { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; padding: 25px 0; background: #f8f9fa; }
+        .exp-filter-btn { padding: 12px 24px; border: 2px solid #1ABC9C; background: white; color: #1E3A2F; border-radius: 30px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .exp-filter-btn:hover, .exp-filter-btn.active { background: #1ABC9C; color: white; }
+        
+        .exp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; padding: 50px 0; }
+        
+        .exp-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .exp-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        
+        .exp-card-img { height: 220px; background-size: cover; background-position: center; position: relative; }
+        .exp-card-badge { position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #1ABC9C, #16A085); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        
+        .exp-card-body { padding: 25px; }
+        .exp-card-cat { color: #1ABC9C; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
+        .exp-card-title { font-size: 1.3rem; color: #1E3A2F; margin-bottom: 12px; line-height: 1.3; }
+        .exp-card-desc { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 18px; min-height: 48px; }
+        
+        .exp-card-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 18px; }
+        .exp-card-meta span { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #777; }
+        .exp-card-meta i { color: #1ABC9C; }
+        
+        .exp-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid #eee; }
+        .exp-card-price { display: flex; align-items: baseline; gap: 5px; }
+        .exp-card-price .from { font-size: 0.85rem; color: #777; }
+        .exp-card-price .amount { font-size: 1.6rem; font-weight: 800; color: #1E3A2F; }
+        .exp-card-price .per { font-size: 0.85rem; color: #777; }
+        .exp-card-btn { background: #1ABC9C; color: white; padding: 12px 24px; border-radius: 25px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+        .exp-card-btn:hover { background: #16A085; }
+        
+        .cta-section { background: linear-gradient(135deg, #1E3A2F, #2D5A4A); padding: 60px 0; text-align: center; color: white; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 15px; }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 25px; }
+        
+        @media (max-width: 768px) {
+            .exp-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="position: fixed; width: 100%;">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏝️</span>
+                <img src="images/logo.png" alt="Maya Sun Tours" style="height: 50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="experiencias.html" class="active">Experiencias</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5299845899872" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>🎪 Experiencias Únicas</h1>
+            <p>Vive aventuras memorables en el Caribe mexicano</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="exp-filters">
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                <button class="exp-filter-btn active" onclick="filterExp('all', this)">
+                    <i class="fas fa-th"></i> Todas
+                </button>
+                <button class="exp-filter-btn" onclick="filterExp('playa', this)">
+                    🏖️ Playa
+                </button>
+                <button class="exp-filter-btn" onclick="filterExp('mar', this)">
+                    ⛵ Mar
+                </button>
+                <button class="exp-filter-btn" onclick="filterExp('cultura', this)">
+                    🏛️ Cultura
+                </button>
+                <button class="exp-filter-btn" onclick="filterExp('extremo', this)">
+                    💪 Extremo
+                </button>
+                <button class="exp-filter-btn" onclick="filterExp('noche', this)">
+                    🌙 Nocturno
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Experiencias -->
+    <section class="exp-grid">
+        <div class="container">
+            <div class="exp-grid">
+                
+                <!-- Experiencia 1 -->
+                <div class="exp-card" data-category="mar">
+                    <div class="exp-card-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80')">
+                        <span class="exp-card-badge">🚤 Top #1</span>
+                    </div>
+                    <div class="exp-card-body">
+                        <div class="exp-card-cat">⛵ Mar</div>
+                        <h3 class="exp-card-title">🚤 Lancha Transparente a El Cielo</h3>
+                        <p class="exp-card-desc">Navega en lancha de piso cristal. Ve estrellas marinas sin mojarte. Incluye 2 cervezas y ferry.</p>
+                        <div class="exp-card-meta">
+                            <span><i class="far fa-clock"></i> 2-3 horas</span>
+                            <span><i class="fas fa-users"></i> Máx 8</span>
+                        </div>
+                        <div class="exp-card-footer">
+                            <div class="exp-card-price">
+                                <span class="from">Desde</span>
+                                <span class="amount">$499</span>
+                                <span class="per">MXN</span>
+                            </div>
+                            <a href="tour.html?id=lancha-transparente" class="exp-card-btn">Ver →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="exp-card" data-category="playa">
+                    <div class="exp-card-img" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80')">
+                        <span class="exp-card-badge">🏖️ Relax</span>
+                    </div>
+                    <div class="exp-card-body">
+                        <div class="exp-card-cat">🏖️ Playa</div>
+                        <h3 class="exp-card-title">🧖 Day Pass Playa Mia</h3>
+                        <p class="exp-card-desc">Día de relax en playa privada. Alberca, hamacas, restaurante y vistas espectaculares.</p>
+                        <div class="exp-card-meta">
+                            <span><i class="far fa-clock"></i> Full Day</span>
+                            <span><i class="fas fa-umbrella-beach"></i> Playa privada</span>
+                        </div>
+                        <div class="exp-card-footer">
+                            <div class="exp-card-price">
+                                <span class="from">Desde</span>
+                                <span class="amount">$399</span>
+                                <span class="per">MXN</span>
+                            </div>
+                            <a href="tour.html?id=playa-mia" class="exp-card-btn">Ver →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="exp-card" data-category="mar">
+                    <div class="exp-card-img" style="background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80')">
+                        <span class="exp-card-badge">🤿 Snorkel</span>
+                    </div>
+                    <div class="exp-card-body">
+                        <div class="exp-card-cat">⛵ Mar</div>
+                        <h3 class="exp-card-title">🤿 Snorkel en Arrecife Privado</h3>
+                        <p class="exp-card-desc">Explora un arrecife exclusivo con tortugas marinas. Guía profesional incluido.</p>
+                        <div class="exp-card-meta">
+                            <span><i class="far fa-clock"></i> 3 horas</span>
+                            <span><i class="fas fa-fish"></i> Tortugas</span>
+                        </div>
+                        <div class="exp-card-footer">
+                            <div class="exp-card-price">
+                                <span class="from">Desde</span>
+                                <span class="amount">$599</span>
+                                <span class="per">MXN</span>
+                            </div>
+                            <a href="tour.html?id=snorkel-privado" class="exp-card-btn">Ver →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 4 -->
+                <div class="exp-card" data-category="cultura">
+                    <div class="exp-card-img" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80')">
+                        <span class="exp-card-badge">🏛️ Historia</span>
+                    </div>
+                    <div class="exp-card-body">
+                        <div class="exp-card-cat">🏛️ Cultura</div>
+                        <h3 class="exp-card-title">🗿 Tour Privado Chichen Itza</h3>
+                        <p class="exp-card-desc">Guía especializado exclusivo. Evita masas. Incluye Valladolid y cenote.</p>
+                        <div class="exp-card-meta">
+                            <span><i class="far fa-clock"></i> 10 horas</span>
+                            <span><i class="fas fa-user-tie"></i> Guía privado</span>
+                        </div>
+                        <div class="exp-card-footer">
+                            <div class="exp-card-price">
+                                <span class="from">Desde</span>
+                                <span class="amount">$1,899</span>
+                                <span class="per">MXN</span>
+                            </div>
+                            <a href="tour.html?id=chichen-privado" class="exp-card-btn">Ver →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 5 -->
+                <div class="exp-card" data-category="extremo">
+                    <div class="exp-card-img" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80')">
+                        <span class="exp-card-badge">💪 Extremo</span>
+                    </div>
+                    <div class="exp-card-body">
+                        <div class="exp-card-cat">💪 Extremo</div>
+                        <h3 class="exp-card-title">🪢 Jungle Mega Tirolesas</h3>
+                        <p class="exp-card-desc">10 tirolesas sobre la selva. El tobogán más largo. Vehículos anfibios.</p>
+                        <div class="exp-card-meta">
+                            <span><i class="far fa-clock"></i> 4 horas</span>
+                            <span><i class="fas fa-tree"></i> Selva</span>
+                        </div>
+                        <div class="exp-card-footer">
+                            <div class="exp-card-price">
+                                <span class="from">Desde</span>
+                                <span class="amount">$1,299</span>
+                                <span class="per">MXN</span>
+                            </div>
+                            <a href="tour.html?id=jungle-tirolesas" class="exp-card-btn">Ver →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 6 -->
+                <div class="exp-card" data-category="noche">
+                    <div class="exp-card-img" style="background-image: url('https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80')">
+                        <span class="exp-card-badge">🌙 Fiesta</span>
+                    </div>
+                    <div class="exp-card-body">
+                        <div class="exp-card-cat">🌙 Nocturno</div>
+                        <h3 class="exp-card-title">🎭 Sunset Cruise + Cena</h3>
+                        <p class="exp-card-desc">Navegación al atardecer con cena gourmet, barra libre y música en vivo.</p>
+                        <div class="exp-card-meta">
+                            <span><i class="far fa-clock"></i> 4 horas</span>
+                            <span><i class="fas fa-music"></i> Música live</span>
+                        </div>
+                        <div class="exp-card-footer">
+                            <div class="exp-card-price">
+                                <span class="from">Desde</span>
+                                <span class="amount">$1,299</span>
+                                <span class="per">MXN</span>
+                            </div>
+                            <a href="tour.html?id=sunset-cruise" class="exp-card-btn">Ver →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Buscas algo diferente?</h2>
+            <p>Contáctanos para experiencias personalizadas</p>
+            <a href="https://wa.me/5299845899872" class="btn btn-primary" style="background: white; color: #1ABC9C; padding: 15px 35px; border-radius: 30px; font-weight: 700; text-decoration: none;">
+                <i class="fab fa-whatsapp"></i> Chatear
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Maya Sun Tours</h4>
+                    <p>Los mejores tours del Caribe.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="paquetes.html">Paquetes</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +52 984 589 9872</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Sun Tours</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5299845899872" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        .navbar { position: fixed; top: 0; width: 100%; background: #1E3A2F; padding: 15px 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; }
+        .logo-icon { font-size: 1.8rem; }
+        .logo-text { font-size: 1.3rem; font-weight: 700; }
+        .logo-text .accent { color: #1ABC9C; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #1ABC9C; }
+        .btn-whatsapp { background: #25D366; color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+        .footer { background: #1E3A2F; color: white; padding: 50px 0 20px; }
+        .footer h4 { margin-bottom: 15px; }
+        .footer ul { list-style: none; padding: 0; }
+        .footer li { margin-bottom: 10px; }
+        .footer a { color: white; text-decoration: none; opacity: 0.8; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 999; }
+        .page-header { margin-top: 70px; }
+    </style>
+
+    <script>
+        function filterExp(category, btn) {
+            document.querySelectorAll('.exp-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            document.querySelectorAll('.exp-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

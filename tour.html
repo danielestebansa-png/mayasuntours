@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Tour | Maya Sun Tours</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+    <style>
+        /* Layout estilo MercadoLibre */
+        .tour-layout { display: grid; grid-template-columns: 65% 35%; gap: 30px; max-width: 1300px; margin: 100px auto 50px; padding: 0 30px; }
+        
+        /* Columna Izquierda: Gallery + Descripción */
+        .tour-left-column { display: flex; flex-direction: column; gap: 25px; padding-top: 20px; }
+        
+        /* Sticky para ambas columnas */
+        .tour-gallery-sticky { position: sticky; top: 90px; }
+        
+        /* Gallery */
+        .gallery-main { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .gallery-main img { width: 100%; height: 450px; object-fit: cover; display: block; }
+        
+        .gallery-thumbs { display: flex; gap: 10px; margin-top: 15px; overflow-x: auto; padding-bottom: 10px; }
+        .thumb-item { flex-shrink: 0; width: 90px; height: 70px; border-radius: 8px; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; opacity: 0.7; }
+        .thumb-item:hover, .thumb-item.active { border-color: #1ABC9C; opacity: 1; }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Navigation arrows */
+        .gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .gallery-nav:hover { background: #1ABC9C; }
+        .gallery-nav.prev { left: 15px; }
+        .gallery-nav.next { right: 15px; }
+        
+        /* Descripción Section */
+        .description-section { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .description-section h2 { color: #1E3A2F; font-size: 1.5rem; margin-bottom: 20px; }
+        .description-section p { color: #555; font-size: 1.05rem; line-height: 1.9; margin-bottom: 20px; }
+        
+        /* Highlights */
+        .highlights-section { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .highlights-section h3 { color: #1E3A2F; font-size: 1.3rem; margin-bottom: 20px; }
+        .highlights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .highlight-item { display: flex; align-items: center; gap: 12px; padding: 15px; background: #e8f8f5; border-radius: 10px; }
+        .highlight-item i { color: #1ABC9C; font-size: 1.2rem; }
+        .highlight-item span { color: #1E3A2F; }
+        
+        /* Included */
+        .included-section { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .included-section h3 { color: #1E3A2F; font-size: 1.3rem; margin-bottom: 20px; }
+        .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .included-item { display: flex; align-items: center; gap: 12px; color: #555; padding: 10px 0; }
+        .included-item i { color: #1ABC9C; }
+        
+        /* Columna Derecha: Info + Booking */
+        .tour-right-column { display: flex; flex-direction: column; gap: 20px; }
+        
+        /* Booking Card */
+        .booking-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 15px 50px rgba(0,0,0,0.12); position: sticky; top: 90px; }
+        
+        .tour-header-info { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .tour-header-info h1 { font-size: 1.6rem; color: #1E3A2F; line-height: 1.3; margin-bottom: 15px; }
+        
+        .badge-display { display: inline-block; background: linear-gradient(135deg, #1ABC9C, #16A085); color: white; padding: 8px 18px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; }
+        
+        .rating-display { display: flex; align-items: center; gap: 10px; padding: 15px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .rating-stars { color: #F4D03F; letter-spacing: 3px; }
+        .rating-num { font-size: 1.4rem; font-weight: 700; color: #1E3A2F; }
+        .rating-reviews { color: #777; }
+        
+        .meta-icons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0; }
+        .meta-item { display: flex; align-items: center; gap: 10px; padding: 12px; background: #f8f9fa; border-radius: 10px; }
+        .meta-item i { color: #1ABC9C; font-size: 1.2rem; }
+        .meta-item span { font-size: 0.9rem; color: #555; }
+        
+        .price-section { text-align: center; padding: 20px 0; border-bottom: 1px solid #eee; }
+        .price-main { font-size: 2.5rem; font-weight: 800; color: #1E3A2F; }
+        .price-per { color: #777; font-size: 0.9rem; }
+        
+        .options-section { margin: 20px 0; }
+        .options-section h4 { color: #1E3A2F; margin-bottom: 12px; }
+        .option-row { display: flex; justify-content: space-between; align-items: center; padding: 15px; margin: 10px 0; border: 2px solid #eee; border-radius: 12px; cursor: pointer; transition: all 0.3s; }
+        .option-row:hover { border-color: #1ABC9C; }
+        .option-row.selected { border-color: #1ABC9C; background: #e8f8f5; }
+        .option-row label { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+        .option-row input { accent-color: #1ABC9C; transform: scale(1.2); }
+        .opt-price { font-weight: 700; color: #1ABC9C; font-size: 1.1rem; }
+        
+        .quantity-section { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #f8f9fa; border-radius: 12px; margin: 20px 0; }
+        .qty-controls { display: flex; align-items: center; gap: 15px; }
+        .qty-btn { width: 35px; height: 35px; border: 2px solid #1ABC9C; background: white; border-radius: 50%; cursor: pointer; color: #1ABC9C; font-size: 1rem; transition: all 0.3s; }
+        .qty-btn:hover { background: #1ABC9C; color: white; }
+        .qty-num { font-size: 1.2rem; font-weight: 700; min-width: 30px; text-align: center; }
+        
+        .total-section { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 3px solid #1E3A2F; margin-top: 15px; }
+        .total-label { font-weight: 700; font-size: 1.1rem; }
+        .total-amount { font-size: 1.6rem; font-weight: 800; color: #1ABC9C; }
+        
+        .btn-book { width: 100%; padding: 18px; font-size: 1.1rem; border-radius: 30px; margin-top: 15px; }
+        
+        .extras-section { margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; }
+        .extras-section h4 { color: #1E3A2F; margin-bottom: 12px; }
+        .extra-opt { display: flex; align-items: center; gap: 10px; padding: 10px 0; cursor: pointer; }
+        .extra-opt input { accent-color: #1ABC9C; transform: scale(1.2); }
+        
+        /* Info boxes */
+        .info-section { display: flex; flex-direction: column; gap: 15px; }
+        .info-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .info-box h4 { color: #1E3A2F; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .info-box ul { list-style: none; padding: 0; margin: 0; }
+        .info-box li { padding: 8px 0; color: #555; display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+        .info-box li i { color: #1ABC9C; width: 18px; }
+        
+        @media (max-width: 1000px) {
+            .tour-layout { grid-template-columns: 1fr; }
+            .tour-right-column { position: static; }
+            .booking-card { position: static; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏝️</span>
+                <img src="images/logo.png" alt="Maya Sun Tours" style="height: 50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5299845899872" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <div class="tour-layout">
+        <!-- Columna Izquierda -->
+        <div class="tour-left-column tour-gallery-sticky">
+            <!-- Gallery -->
+            <div class="gallery-main">
+                <img id="main-img" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80" alt="Tour">
+                <button class="gallery-nav prev" onclick="prevImage()">&#10094;</button>
+                <button class="gallery-nav next" onclick="nextImage()">&#10095;</button>
+            </div>
+            <div class="gallery-thumbs" id="thumbs-container"></div>
+
+            <!-- Descripción -->
+            <div class="description-section">
+                <h2>📝 Descripción del Tour</h2>
+                <p id="tour-desc">Cargando...</p>
+            </div>
+
+            <!-- Highlights -->
+            <div class="highlights-section">
+                <h3>🌟 Lo que verás y harás</h3>
+                <div class="highlights-grid" id="highlights-container"></div>
+            </div>
+
+            <!-- Included -->
+            <div class="included-section">
+                <h3>✅ ¿Qué está incluido?</h3>
+                <div class="included-grid" id="included-container"></div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="tour-right-column">
+            <div class="booking-card" style="position: sticky; top: 90px;">
+                <div class="tour-header-info">
+                    <span class="badge-display" id="tour-badge">🔥 Más Vendido</span>
+                    <h1 id="tour-title">Cargando...</h1>
+                    
+                    <div class="rating-display">
+                        <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-num">4.9</span>
+                        <span class="rating-reviews">(125 reseñas)</span>
+                    </div>
+
+                    <div class="meta-icons">
+                        <div class="meta-item"><i class="far fa-clock"></i><span id="tour-duration">8 horas</span></div>
+                        <div class="meta-item"><i class="fas fa-users"></i><span id="tour-group">Máx 20</span></div>
+                        <div class="meta-item"><i class="fas fa-language"></i><span id="tour-lang">Español/Inglés</span></div>
+                        <div class="meta-item"><i class="fas fa-map-marker-alt"></i><span>Playa del Carmen</span></div>
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <div class="price-main" id="price-display">$2,099 MXN</div>
+                    <div class="price-per">por persona</div>
+                </div>
+
+                <div class="options-section">
+                    <h4>🎫 Selecciona tu entrada:</h4>
+                    <div class="option-row selected" onclick="selectOpt(this, 1, 2099)">
+                        <label><input type="radio" name="opt" checked>👤 Adulto</label>
+                        <span class="opt-price" id="price-adult">$2,099</span>
+                    </div>
+                    <div class="option-row" onclick="selectOpt(this, 0.7, 2099)">
+                        <label><input type="radio" name="opt">👶 Niño (5-11)</label>
+                        <span class="opt-price" id="price-child">$1,469</span>
+                    </div>
+                </div>
+
+                <div class="quantity-section">
+                    <span>👥 Personas:</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="updateQty(-1)">−</button>
+                        <span class="qty-num" id="qty-num">1</span>
+                        <button class="qty-btn" onclick="updateQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="total-section">
+                    <span class="total-label">💰 Total:</span>
+                    <span class="total-amount" id="total-display">$2,099 MXN</span>
+                </div>
+
+                <button class="btn btn-primary btn-book" onclick="bookNow()">
+                    📱 Reservar por WhatsApp
+                </button>
+
+                <div class="extras-section">
+                    <h4>✨ Extras:</h4>
+                    <label class="extra-opt"><input type="checkbox"> 📸 Fotos (+$300)</label>
+                    <label class="extra-opt"><input type="checkbox"> 🚐 Transporte (+$500)</label>
+                </div>
+            </div>
+
+            <!-- Info Boxes -->
+            <div class="info-section">
+                <div class="info-box">
+                    <h4>📋 Cancelación</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Gratis hasta 48h antes</li>
+                        <li><i class="fas fa-minus"></i> 50% entre 24-48h</li>
+                        <li><i class="fas fa-times"></i> Sin reembolso &lt;24h</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h4>📞 Contacto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +52 984 589 9872</li>
+                        <li><i class="fas fa-envelope"></i> hola@rivieramaya-adventures.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tours Relacionados -->
+    <section class="related-tours" style="max-width: 1300px; margin: 0 auto; padding: 30px;">
+        <h3 style="color: #1E3A2F; font-size: 1.4rem; margin-bottom: 20px;">🎯 Tours Recomendados para Ti</h3>
+        <div class="related-grid" id="related-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🏝️ Maya Sun Tours</h4>
+                    <p>Los mejores tours del Caribe.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="paquetes.html">Paquetes</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5299845899872" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+        const toursData = {
+            'catamaran-cozumel': {
+                title: '⛵ Catamarán Snorkel & Lunch a Cozumel - Día Completo',
+                badge: '🔥 Más Vendido',
+                images: [
+                    'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80',
+                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
+                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80'
+                ],
+                duration: '8 horas (Full Day)',
+                group: 'Máx 20 personas',
+                lang: 'Español / Inglés',
+                price: 2099,
+                priceChild: 1469,
+                description: '🎉 ¡Vive una experiencia increíble en el Caribe mexicano! Navega hacia Cozumel en un catamarán exclusivo mientras disfrutas de las aguas más turquesas del mundo. 🏝️\n\nEste tour te lleva a explorar dos arrecifes de coral espectaculares donde podrás hacer snorkel y observar miles de peces tropicales. 🐠🐟 Después, relájate en las cristalinas aguas de Playa Mia con un delicioso almuerzo buffet. 🍹\n\n¡Perfecto para familias, parejas y grupos de amigos que buscan aventura y relajación!',
+                highlights: ['🤿 Snorkel en 2 arrecifes', '🍽️ Almuerzo buffet', '🍹 Barra libre', '🏖️ Playa Mia', '🛥️ Catamarán exclusivo'],
+                included: ['🛥️ Travesía en catamarán', '🤿 Equipo de snorkel', '🍽️ Almuerzo buffet', '🍹 Bebidas ilimitadas', '🧴 Toallas y seguro']
+            },
+            'lancha-transparente': {
+                title: '🚤 Lancha Transparente a El Cielo - Experiencia Única',
+                badge: '🌟 Top #1',
+                images: [
+                    'images/tour-cielo/01_manta_real_4.jpg',
+                    'images/tour-cielo/02_manta_real_6.jpg',
+                    'images/tour-cielo/03_ivan_01.jpg',
+                    'images/tour-cielo/04_snorkel_real_1.jpg',
+                    'images/tour-cielo/05_img_23.jpg',
+                    'images/tour-cielo/06_manta_real_5.jpg',
+                    'images/tour-cielo/07_manta_real_7.jpg',
+                    'images/tour-cielo/08_palancar_better.jpg',
+                    'images/tour-cielo/09_palancar_diving.jpg',
+                    'images/tour-cielo/10_colombia_better.jpg',
+                    'images/tour-cielo/11_colombia_divers.jpg'
+                ],
+                duration: '2-3 horas',
+                group: 'Máx 8 personas',
+                lang: 'Español / Inglés',
+                price: 899,
+                priceChild: 699,
+                description: '✨ ¡Una experiencia mágica que debes vivir al menos una vez! Navega en una lancha de piso transparente por las aguas más turquesas del Caribe. 🌊\n\nEl destino es "El Cielo", un lugar famoso por sus estrellas marinas. ¡Podrás verlas sin necesidad de mojarte mientras el piso de cristal te muestra toda la vida marina! 🐚🦑\n\nPasamos 1.5 horas en El Cielo observando las estrellas marinas. El tour incluye 2 cervezas frías y el ferry de regreso a Playa del Carmen. 🍺⛴️\n\n⚠️ FERRY NO INCLUIDO: El ferry de Cozumel ($550 MXN aprox) no está incluido - se paga aparte.',
+                highlights: ['🚤 Lancha de piso cristal', '⭐ El Cielo con estrellas', '📸 Fotos sin mojarte', '🍺 2 cervezas', '⛴️ Ferry regreso'],
+                included: ['🚤 Lancha transparente', '🍺 2 cervezas', '⛴️ Ferry regreso', '🥤 Agua y refrescos', '🤿 Equipo snorkel']
+            },
+            'xcaret-plus': {
+                title: '🎢 Xcaret Plus - El Parque Mexicano Increíble',
+                badge: '🏆 #1 Parque',
+                images: [
+                    'https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
+                    'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80'
+                ],
+                duration: '10 horas (Full Day)',
+                group: 'Entrada general',
+                lang: 'Acceso libre',
+                price: 2799,
+                priceChild: 1999,
+                description: '🎊 ¡El parque más emblemático de México te espera! Xcaret es mucho más que un parque acuático - es una celebración de la cultura mexicana. 🌵\n\nNada en los 3 famosos ríos subterráneos, explora más de 50 atractivos naturales y culturales, admira delfines, tiburones y cientos de especies. 🌿\n\nEl show nocturno es obligatorio - un espectáculo de ballet folklórico con más de 300 artistas. 💃🕺',
+                highlights: ['🌊 3 ríos subterráneos', '🌙 Show nocturno', '🍽️ Buffet + 1 cerveza', '🐬 Shows de animales', '🎭 50+ atracciones'],
+                included: ['🎟️ Entrada al parque', '🚌 Transporte', '🍽️ Almuerzo buffet', '🍺 1 cerveza', '🏊 Ríos incluido']
+            },
+            'xplor-dia': {
+                title: '🔥 Xplor Día - Aventura Extrema Total',
+                badge: '💪 Para Adventurados',
+                images: [
+                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80',
+                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
+                    'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80'
+                ],
+                duration: 'Full Day',
+                group: 'Entrada general',
+                lang: 'Acceso libre',
+                price: 2499,
+                priceChild: 1849,
+                description: '🚀 ¡Siente la adrenalina máxima en la selva maya! Xplor Día te espera con las actividades más emocionantes. 🌴\n\nVuela en 7 tirolesas sobre la selva, conduce vehículos anfibios, nada en ríos subterráneos cristalinos y rema en balsas. 🎢\n\n¡Todo incluido! Comida ilimitada, bebidas y equipo de seguridad.',
+                highlights: ['🪢 7 tirolesas', '🚙 Vehículos anfibios', '🏊 Ríos subterráneos', '🛶 Balsas', '🍽️ Comida ilimitada'],
+                included: ['🎟️ Entrada completa', '🚌 Transporte', '🍽️ Comida ilimitada', '🥤 Bebidas', '🧗 Equipo seguridad']
+            },
+            'chichen-itza': {
+                title: '🏛️ Chichen Itza - La Nueva Maravilla',
+                badge: '📚 Historia Viva',
+                images: [
+                    'https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
+                    'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80'
+                ],
+                duration: '12 horas',
+                group: 'Máx 30 personas',
+                lang: 'Guía bilingüe',
+                price: 1299,
+                priceChild: 999,
+                description: '🏆 ¡Visita una de las 7 maravillas del mundo! Chichen Itza te espera. 🗿\n\nContempla la Pirámide de Kukulkan, aprende sobre el calendario maya, explora el Cenote Sagrado y el Templo de los Guerreros. 🎭\n\nIncluye parada en Valladolid, un Pueblo Mágico hermoso. ¡Una lección de historia viva!',
+                highlights: ['🗿 Pirámide de Kukulkan', '🌊 Cenote sagrado', '🎓 Guía experto', '🏛️ Templo Guerreros', '🏘️ Valladolid'],
+                included: ['🚌 Transporte completo', '🎓 Guía bilingüe', '🍽️ Almuerzo buffet', '🎟️ Entrada Chichen Itza', '🏊 Cenote Ik Kil']
+            },
+            'coco-bongo': {
+                title: '🎭 Coco Bongo - El Show Más Famoso',
+                badge: '🌙 Fiesta Total',
+                images: [
+                    'https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
+                    'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80'
+                ],
+                duration: '4-5 horas',
+                group: 'General',
+                lang: 'Música en vivo',
+                price: 1999,
+                priceChild: 1499,
+                description: '🎉 ¡La noche más loca de Playa del Carmen! Coco Bongo es reconocido mundialment. 🎵\n\nDisfruta de conciertos en vivo, acrobacias en pantalla gigante, espuma, globos y la mejor música. 💃🕺\n\nVarios niveles disponibles - desde general hasta VIP. ¡Una noche que no olvidarás!',
+                highlights: ['🎤 Shows en vivo', '🎪 Acrobacias', '🫧 Foam party', '🥂 Barra libre', '👑 VIP disponible'],
+                included: ['🎟️ Entrada show', '🍹 Bebidas ilimitadas', '🎵 Todos los niveles', '🗄️ Locker', '📸 Fotos']
+            }
+        };
+
+        // Map old/alternative IDs to current tour IDs
+        const idMappings = {
+            'tour-al-cielo': 'lancha-transparente',
+            'el-cielo': 'lancha-transparente',
+            'cielo-cozumel': 'lancha-transparente'
+        };
+        const paramId = urlParams.get('id') || 'catamaran-cozumel';
+        const tourId = idMappings[paramId] || paramId;
+        const tour = toursData[tourId];
+
+        let quantity = 1;
+        let multiplier = 1;
+        let basePrice = 2099;
+        let currentImageIndex = 0;
+
+        if (tour) {
+            console.log('Loading tour:', tourId, tour.title);
+            document.getElementById('main-img').src = tour.images[0];
+            document.getElementById('tour-badge').textContent = tour.badge;
+            document.getElementById('tour-title').textContent = tour.title;
+            document.getElementById('tour-duration').textContent = tour.duration;
+            document.getElementById('tour-group').textContent = tour.group;
+            document.getElementById('tour-lang').textContent = tour.lang;
+            document.getElementById('tour-desc').innerHTML = tour.description.replace(/\n/g, '<br><br>');
+            document.getElementById('price-display').textContent = `$${tour.price.toLocaleString()} MXN`;
+            document.getElementById('price-adult').textContent = `$${tour.price.toLocaleString()}`;
+            document.getElementById('price-child').textContent = `$${tour.priceChild.toLocaleString()}`;
+        } else {
+            console.error('Tour not found:', tourId);
+            document.getElementById('tour-title').textContent = 'Tour no encontrado';
+            return; // Stop execution if tour not found
+        }
+            
+            basePrice = tour.price;
+            
+            // Gallery thumbs
+            const thumbs = document.getElementById('thumbs-container');
+            tour.images.forEach((img, i) => {
+                const thumbDiv = document.createElement('div');
+                thumbDiv.className = 'thumb-item' + (i===0?' active':'');
+                thumbDiv.innerHTML = `<img src="${img}" alt="Foto">`;
+                thumbDiv.onmouseenter = () => changeImage(i);
+                thumbs.appendChild(thumbDiv);
+            });
+            
+            // Highlights
+            const highlightsDiv = document.getElementById('highlights-container');
+            tour.highlights.forEach(h => {
+                highlightsDiv.innerHTML += `<div class="highlight-item"><i class="fas fa-check-circle"></i><span>${h}</span></div>`;
+            });
+            
+            // Included
+            const includedDiv = document.getElementById('included-container');
+            tour.included.forEach(i => {
+                includedDiv.innerHTML += `<div class="included-item"><i class="fas fa-check"></i>${i}</div>`;
+            });
+            
+            updateTotal();
+        }
+
+        function changeImage(index) {
+            currentImageIndex = index;
+            document.getElementById('main-img').src = tour.images[index];
+            document.querySelectorAll('.thumb-item').forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+            });
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + tour.images.length) % tour.images.length;
+            changeImage(currentImageIndex);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % tour.images.length;
+            changeImage(currentImageIndex);
+        }
+
+        function selectOpt(el, mult, price) {
+            document.querySelectorAll('.option-row').forEach(o => o.classList.remove('selected'));
+            el.classList.add('selected');
+            el.querySelector('input').checked = true;
+            multiplier = mult;
+            basePrice = price;
+            updateTotal();
+        }
+
+        function updateQty(delta) {
+            quantity = Math.max(1, quantity + delta);
+            document.getElementById('qty-num').textContent = quantity;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const total = basePrice * multiplier * quantity;
+            document.getElementById('total-display').textContent = `$${total.toLocaleString()} MXN`;
+        }
+
+        function bookNow() {
+            const opt = document.querySelector('input[name="opt"]:checked').value;
+            const msg = `¡Hola! 👋 Quiero reservar: ${tour.title}\n\n🎫 Tipo: ${opt==='adult'?'Adulto':'Niño'}\n👥 Personas: ${quantity}\n💰 Total: ${document.getElementById('total-display').textContent}`;
+            window.open(`https://wa.me/5299845899872?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+        
+        // Tours relacionados dinámicos
+        const relatedContainer = document.getElementById('related-container');
+        const tourKeys = Object.keys(toursData).filter(k => k !== tourId);
+        // Shuffle y tomar 4
+        const shuffled = tourKeys.sort(() => 0.5 - Math.random()).slice(0, 4);
+        shuffled.forEach(key => {
+            const t = toursData[key];
+            relatedContainer.innerHTML += `
+                <a href="tour.html?id=${key}" style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s; text-decoration: none;">
+                    <img src="${t.images[0]}" alt="${t.title}" style="width: 100%; height: 150px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h4 style="color: #1E3A2F; font-size: 1rem; margin-bottom: 8px;">${t.badge} ${t.title.split('-')[0]}</h4>
+                        <p style="color: #1ABC9C; font-weight: 700;">$${t.price.toLocaleString()} MXN</p>
+                    </div>
+                </a>
+            `;
+        });
+    
+    });
+</script>
+</body>
+</html>
