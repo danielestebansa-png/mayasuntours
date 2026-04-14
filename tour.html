@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'cielo-cozumel': 'lancha-transparente'
         };
         const paramId = urlParams.get('id') || 'catamaran-cozumel';
-        const tourId = idMappings[paramId] || paramId;
+        const tourId = paramId;
         const tour = toursData[tourId];
 
         let quantity = 1;
