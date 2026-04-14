@@ -282,6 +282,7 @@
 
     <script>
 document.addEventListener('DOMContentLoaded', function() {
+        try {
             alert('JS running!');
         const toursData = {
             'catamaran-cozumel': {
@@ -453,19 +454,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 thumbDiv.innerHTML = `<img src="${img}" alt="Foto">`;
                 thumbDiv.onmouseenter = () => changeImage(i);
                 thumbs.appendChild(thumbDiv);
-            });
+            } catch(e) { alert('Error: ' + e.message); }
+        });
             
             // Highlights
             const highlightsDiv = document.getElementById('highlights-container');
             tour.highlights.forEach(h => {
                 highlightsDiv.innerHTML += `<div class="highlight-item"><i class="fas fa-check-circle"></i><span>${h}</span></div>`;
-            });
+            } catch(e) { alert('Error: ' + e.message); }
+        });
             
             // Included
             const includedDiv = document.getElementById('included-container');
             tour.included.forEach(i => {
                 includedDiv.innerHTML += `<div class="included-item"><i class="fas fa-check"></i>${i}</div>`;
-            });
+            } catch(e) { alert('Error: ' + e.message); }
+        });
             
             updateTotal();
         }
@@ -475,7 +479,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('main-img').src = tour.images[index];
             document.querySelectorAll('.thumb-item').forEach((t, i) => {
                 t.classList.toggle('active', i === index);
-            });
+            } catch(e) { alert('Error: ' + e.message); }
+        });
         }
 
         function prevImage() {
@@ -530,9 +535,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </a>
             `;
+        } catch(e) { alert('Error: ' + e.message); }
         });
     
-    });
+    } catch(e) { alert('Error: ' + e.message); }
+        });
 </script>
 </body>
 </html>
