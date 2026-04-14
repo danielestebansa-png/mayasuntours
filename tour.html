@@ -282,17 +282,15 @@
 
     <script>
 document.addEventListener('DOMContentLoaded', function() {
-        try {
-            alert('JS running!');
         const toursData = {
             'catamaran-cozumel': {
                 title: '⛵ Catamarán Snorkel & Lunch a Cozumel - Día Completo',
                 badge: '🔥 Más Vendido',
                 images: [
                     'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80',
-                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'images/chichen-itza/03_chichen.jpg',
                     'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
-                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'images/chichen-itza/02_kukulkan_2.jpg',
                     'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80'
                 ],
                 duration: '8 horas (Full Day)',
@@ -329,13 +327,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 highlights: ['🚤 Lancha de piso cristal', '⭐ El Cielo con estrellas', '📸 Fotos sin mojarte', '🍺 2 cervezas', '⛴️ Ferry regreso'],
                 included: ['🚤 Lancha transparente', '🍺 2 cervezas', '⛴️ Ferry regreso', '🥤 Agua y refrescos', '🤿 Equipo snorkel']
             },
+            'tour-al-cielo': {
+                title: '🐠 Tour al Cielo - Snorkel con Mantarrayas',
+                badge: '🌟 #1 Experiencia',
+                images: [
+                    'images/tour-cielo/01_manta_real_4.jpg',
+                    'images/tour-cielo/02_manta_real_6.jpg',
+                    'images/tour-cielo/03_ivan_01.jpg',
+                    'images/tour-cielo/04_snorkel_real_1.jpg',
+                    'images/tour-cielo/05_img_23.jpg',
+                    'images/tour-cielo/06_manta_real_5.jpg',
+                    'images/tour-cielo/07_manta_real_7.jpg',
+                    'images/tour-cielo/08_palancar_better.jpg',
+                    'images/tour-cielo/09_palancar_diving.jpg',
+                    'images/tour-cielo/10_colombia_better.jpg',
+                    'images/tour-cielo/11_colombia_divers.jpg'
+                ],
+                duration: '4-5 horas',
+                group: 'Máx 10 personas',
+                lang: 'Español / Inglés',
+                price: 1150,
+                priceChild: 750,
+                description: '🐠 Vive la experiencia única de nadar con mantarrayas gigantes en Cozumel! Este tour te lleva a El Cielo y los arrecifes Palancar y Colombia.',
+                highlights: ['🦈 Nadar con mantarrayas', '🤿 Snorkel en 2 arrecifes', '🐠 Peces tropicales'],
+                included: ['🛥️ Barco', '🤿 Equipo snorkel', '🍽️ Almuerzo', '🥤 Bebidas']
+            },
             'xcaret-plus': {
                 title: '🎢 Xcaret Plus - El Parque Mexicano Increíble',
                 badge: '🏆 #1 Parque',
                 images: [
-                    'https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80',
-                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
-                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'images/chichen-itza/01_kukulkan.jpg',
+                    'images/chichen-itza/02_kukulkan_2.jpg',
+                    'images/chichen-itza/03_chichen.jpg',
                     'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
                     'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80'
                 ],
@@ -352,9 +375,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: '🔥 Xplor Día - Aventura Extrema Total',
                 badge: '💪 Para Adventurados',
                 images: [
-                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
+                    'images/chichen-itza/02_kukulkan_2.jpg',
                     'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80',
-                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'images/chichen-itza/03_chichen.jpg',
                     'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
                     'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80'
                 ],
@@ -374,12 +397,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'images/chichen-itza/01_kukulkan.jpg',
                     'images/chichen-itza/02_kukulkan_2.jpg',
                     'images/chichen-itza/03_chichen.jpg',
-                    'images/chichen-itza/04_chichen_8.jpg',
-                    'images/chichen-itza/05_cenote.jpg',
-                    'images/chichen-itza/06_cenote_2.jpg',
-                    'images/chichen-itza/07_columnas.jpg',
-                    'images/chichen-itza/08_columnas_2.jpg',
-                    'images/chichen-itza/10_cenote_3.jpg'
+                    'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
+                    'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80'
                 ],
                 duration: '12 horas',
                 group: 'Máx 30 personas',
@@ -394,9 +413,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: '🎭 Coco Bongo - El Show Más Famoso',
                 badge: '🌙 Fiesta Total',
                 images: [
-                    'https://images.unsplash.com/photo-1518638150340-f706c96683b5?w=800&q=80',
-                    'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=800&q=80',
-                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+                    'images/chichen-itza/01_kukulkan.jpg',
+                    'images/chichen-itza/02_kukulkan_2.jpg',
+                    'images/chichen-itza/03_chichen.jpg',
                     'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80',
                     'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&q=80'
                 ],
@@ -412,11 +431,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Map old/alternative IDs to current tour IDs
-        const idMappings = {
-            'tour-al-cielo': 'tour-al-cielo',
-            'el-cielo': 'lancha-transparente',
-            'cielo-cozumel': 'lancha-transparente'
-        };
         const paramId = urlParams.get('id') || 'catamaran-cozumel';
         const tourId = paramId;
         const tour = toursData[tourId];
@@ -454,22 +468,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 thumbDiv.innerHTML = `<img src="${img}" alt="Foto">`;
                 thumbDiv.onmouseenter = () => changeImage(i);
                 thumbs.appendChild(thumbDiv);
-            } catch(e) { alert('Error: ' + e.message); }
-        });
+            });
             
             // Highlights
             const highlightsDiv = document.getElementById('highlights-container');
             tour.highlights.forEach(h => {
                 highlightsDiv.innerHTML += `<div class="highlight-item"><i class="fas fa-check-circle"></i><span>${h}</span></div>`;
-            } catch(e) { alert('Error: ' + e.message); }
-        });
+            });
             
             // Included
             const includedDiv = document.getElementById('included-container');
             tour.included.forEach(i => {
                 includedDiv.innerHTML += `<div class="included-item"><i class="fas fa-check"></i>${i}</div>`;
-            } catch(e) { alert('Error: ' + e.message); }
-        });
+            });
             
             updateTotal();
         }
@@ -479,8 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('main-img').src = tour.images[index];
             document.querySelectorAll('.thumb-item').forEach((t, i) => {
                 t.classList.toggle('active', i === index);
-            } catch(e) { alert('Error: ' + e.message); }
-        });
+            });
         }
 
         function prevImage() {
@@ -535,11 +545,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </a>
             `;
-        } catch(e) { alert('Error: ' + e.message); }
         });
     
-    } catch(e) { alert('Error: ' + e.message); }
-        });
+    });
 </script>
 </body>
 </html>
